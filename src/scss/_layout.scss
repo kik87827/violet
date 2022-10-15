@@ -1,0 +1,41 @@
+/* 공통 선언 */
+
+/* */ 
+html:not(.touchmode) ::-webkit-scrollbar {width: 10px;}
+html:not(.touchmode) ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
+html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
+html,
+.front_body{height:100%;min-height:100vh;}
+.page_wrap{position:relative;}
+
+.header_wrap{height:rem(60);position:relative;width:100%;background-color: #fff;z-index:5;}
+.btn_history_back{}
+.header_title{display:flex;height:100%;justify-content: center;display:flex;align-items: center;}
+.header_title_text{line-height:1;color:#000;display:inline-block;font-size:rem(18);}
+.mid_section{z-index:5;position:relative;}
+
+.btn_history_back{display:flex;align-items:center;justify-content:center;width:rem(55);height:rem(60);position:absolute;top:0;left:0;}
+.btn_history_back:after{
+    display:block;content:'';width:rem(12);height:rem(12);border-left:rem(2) solid #111;border-bottom:rem(2) solid #111;position:absolute;top:50%;left:50%;margin:rem(-7) 0 0 rem(-5);
+    transform: translateZ(0) rotate(45deg);
+}
+
+.btn_closeitem{display:block;width:rem(55);height:rem(60);position:absolute;top:0;right:0;font-size:0;line-height:0;}
+.btn_closeitem:before,
+.btn_closeitem:after{width:rem(24);height:rem(2);display:block;content:'';position:absolute;top:50%;left:50%;background:#000; margin:-1px 0 0 rem(-12);
+    transform: translateZ(0);-webkit-transform: translateZ(0);-ms-transform: translateZ(0);-moz-transform: translateZ(0);
+}
+.btn_closeitem:before{transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+.btn_closeitem:after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
+
+.page_wrap.type2{
+    .header_wrap{background-color:transparent;}
+    .header_title_text{color:#fff;}
+    .btn_history_back{
+        &:after{border-color:#fff;}
+    }
+    &:before{
+        background: linear-gradient(107.48deg, #B754C4 2.41%, #3F4BFF 110.19%);border-radius: 0px 0px rem(26.6) 0px;
+        display:block;content:'';width:100%;height:rem(200);position:absolute;top:0;left:0;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_body">
+	<div class="page_wrap">
+		<a href="#" class="btn_guide">레이어팝업</a>
+	</div>
+	<!-- popup -->
+	<div class="popup_wrap type2" id="samplePopup">
+		<div class="bg_dim"></div>
+		<div class="botpos_vlayer">
+			<div class="botpos_vtitlow"><h3 class="botpos_vtit">타이틀</h3></div>
+			<div class="botpos_vcontlow">
+				내용
+			</div>
+			<div class="botpos_vbtnlow">
+				<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">다음</span></a>
+			</div>
+			<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<!-- // popup -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			var designPopup = new DesignPopup({
+				selector: "#samplePopup"
+			});
+			document.querySelector(".btn_guide").addEventListener("click",()=>{
+				var designPopup = new DesignPopup({
+					selector: "#samplePopup"
+				});
+			});
+			// designPopup.popupHide("#samplePopup"); 닫기
+		});
+	</script>
+</body>
+</html>

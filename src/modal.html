@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_body">
+	<div class="page_wrap">
+		
+	</div>
+	<script>
+		let designAlert = new DesignModal({
+			type: "confirm", // alert, confirm
+			message: `
+				<p class="modal_message_title">카테고리 삭제</p>
+				<p class="modal_message_text">카테고리를 삭제하시겠습니까?</p>
+			`,
+			btnCloseText :"닫기",
+			btnMainText :"삭제",
+			closeCallback() {
+				console.log('closeCallback');
+			},
+			btnMainCallback() {
+				console.log('btnMainCallback');
+			}
+		});
+		// 강제로 닫기 designAlert.removeHide();
+	</script>
+</body>
+</html>
