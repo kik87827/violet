@@ -166,12 +166,12 @@ textarea {
 }
 
 :-ms-input-placeholder {
-  color: #bebebe !important;
+  color: #bebebe;
   font-family: "Noto Sans KR";
 }
 
 ::-ms-input-placeholder {
-  color: #bebebe !important;
+  color: #bebebe;
   font-family: "Noto Sans KR";
 }
 
@@ -291,6 +291,60 @@ html.smooth {
   font-style: normal;
   font-weight: 700;
   src: local("Noto Sans KR"), url("./webfont/NotoSans-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("./webfont/Pretendard-Black.woff2") format("woff2"), url("./webfont/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("./webfont/Pretendard-ExtraBold.woff2") format("woff2"), url("./webfont/Pretendard-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("./webfont/Pretendard-Bold.woff2") format("woff2"), url("./webfont/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("./webfont/Pretendard-SemiBold.woff2") format("woff2"), url("./webfont/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("./webfont/Pretendard-Medium.woff2") format("woff2"), url("./webfont/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("./webfont/Pretendard-Regular.woff2") format("woff2"), url("./webfont/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("./webfont/Pretendard-Light.woff2") format("woff2"), url("./webfont/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("./webfont/Pretendard-ExtraLight.woff2") format("woff2"), url("./webfont/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("./webfont/Pretendard-Thin.woff2") format("woff2"), url("./webfont/Pretendard-Thin.woff") format("woff");
 }
 /**
  * Swiper 4.5.0
@@ -874,7 +928,29 @@ html,
 .page_wrap {
   position: relative;
 }
-
+.page_wrap.type2 .header_wrap {
+  background-color: transparent;
+}
+.page_wrap.type2 .header_title_text {
+  color: #fff;
+}
+.page_wrap.type2 .btn_history_back:after {
+  border-color: #fff;
+}
+.page_wrap.type2:before {
+  background: linear-gradient(107.48deg, #B754C4 2.41%, #3F4BFF 110.19%);
+  border-radius: 0px 0px 1.6625rem 0px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 12.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page_wrap.type2 .mid_section {
+  padding: 2.0833333333rem 1.25rem 9.0208333333rem;
+}
 .header_wrap {
   height: 3.75rem;
   position: relative;
@@ -966,27 +1042,6 @@ html,
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-}
-
-.page_wrap.type2 .header_wrap {
-  background-color: transparent;
-}
-.page_wrap.type2 .header_title_text {
-  color: #fff;
-}
-.page_wrap.type2 .btn_history_back:after {
-  border-color: #fff;
-}
-.page_wrap.type2:before {
-  background: linear-gradient(107.48deg, #B754C4 2.41%, #3F4BFF 110.19%);
-  border-radius: 0px 0px 1.6625rem 0px;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 12.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /*! jQuery UI - v1.11.4 - 2017-08-09
@@ -2515,6 +2570,11 @@ html,
   font-size: 0.75rem;
   color: #333333;
 }
+.popup_contentlow.type2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .pcont_inwrap {
   padding: 0;
@@ -2599,5 +2659,232 @@ html,
   font-size: 18px;
   color: #fff;
   line-height: 1;
+}
+
+/* component */
+.list_top_wrap {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  justify-content: space-between;
+  margin-bottom: 1.5625rem;
+}
+
+.list_top_title {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.btn_listmore {
+  display: block;
+  position: relative;
+  width: 1.3541666667rem;
+  height: 1.3541666667rem;
+}
+.btn_listmore:before, .btn_listmore:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0.0625rem;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: -0.03125rem 0 0 0;
+}
+.btn_listmore:after {
+  transform: rotate(90deg);
+}
+
+.boxitem_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.4166666667rem;
+  min-height: 0;
+}
+.boxitem_list > li {
+  padding: 0.4166666667rem;
+  box-sizing: border-box;
+  width: 50%;
+  flex: 0 0 50%;
+}
+.boxitem_list > li.nodata_li {
+  flex: 1 !important;
+  width: 100% !important;
+  text-align: center;
+  padding: 7.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxitem_obj {
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #999999;
+  min-height: 9.5833333333rem;
+  position: relative;
+}
+
+.boxitem_count_row {
+  padding: 1.0625rem 0.8333333333rem 3.125rem;
+}
+.boxitem_count_row .count_label,
+.boxitem_count_row .count_value {
+  display: inline;
+  line-height: 1;
+  font-size: 1.25rem;
+}
+.boxitem_count_row .count_label {
+  margin-right: 0.4166666667rem;
+  font-weight: 300;
+}
+.boxitem_count_row .count_value {
+  font-weight: 500;
+  font-family: "Pretendard";
+}
+
+.boxitem_menu_row {
+  flex: 0;
+}
+
+.boxitem_menu_list {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1.0416666667rem;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.375rem;
+}
+.boxitem_menu_list > li {
+  flex: 1;
+  position: relative;
+  padding: 0 0.625rem;
+}
+.boxitem_menu_list > li:last-of-type:after {
+  display: none;
+}
+.boxitem_menu_list > li:after {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 0.7291666667rem;
+  background: #D9D9D9;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.boxitem_menu_list > li .ico_menu {
+  margin: 0 auto;
+}
+
+li.nodata_li {
+  flex: 1 !important;
+  width: 100% !important;
+  text-align: center;
+}
+
+.ico_menu {
+  display: block;
+  width: 1.6666666667rem;
+  height: 1.6666666667rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 50%;
+}
+.ico_menu.ico_modify {
+  background-image: url("../images/ico_modify.png");
+}
+.ico_menu.ico_del {
+  background-image: url("../images/ico_del.png");
+}
+.ico_menu.ico_boast {
+  background-image: url("../images/ico_boast.png");
+}
+.ico_menu.ico_04 {
+  background-image: url("../images/ico_sale.png");
+}
+
+.ico_snsitem_vlist {
+  text-align: center;
+}
+.ico_snsitem_vlist > li {
+  padding-bottom: 2.0833333333rem;
+}
+.ico_snsitem_vlist > li:last-of-type {
+  padding-bottom: 0;
+}
+
+.ico_snsitem:before {
+  display: block;
+  content: "";
+  width: 2.5rem;
+  height: 1.875rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 0;
+  margin: 0 auto;
+}
+.ico_snsitem.ico_kakao:before {
+  background-image: url("../images/ico_kakao.png");
+}
+.ico_snsitem.ico_insta:before {
+  background-image: url("../images/ico_insta.png");
+}
+.ico_snsitem.ico_face:before {
+  background-image: url("../images/ico_face.png");
+}
+.ico_snsitem.ico_url:before {
+  background-image: url("../images/ico_url.png");
+}
+
+.snsitem_text {
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 0.8333333333rem;
+  line-height: 1;
+  margin-top: 0.8333333333rem;
+}
+
+input.form_input {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  height: 2.7083333333rem;
+  padding: 0 0.8125rem;
+  line-height: 1;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.8333333333rem;
+  color: #000;
+}
+
+input.form_input::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+input.form_input::-moz-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+input.form_input:-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+input.form_input::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+input.form_input::input-placeholder {
+  color: #000;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */

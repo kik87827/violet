@@ -33,8 +33,8 @@ textarea{font-family: 'Noto Sans KR';color:#000;border:1px solid #c8c8c8;-webkit
 
 ::-webkit-input-placeholder{color:#bebebe;font-family: 'Noto Sans KR';}
 ::-moz-input-placeholder{color:#bebebe;font-family: 'Noto Sans KR';}
-:-ms-input-placeholder{color:#bebebe !important;font-family: 'Noto Sans KR';}
-::-ms-input-placeholder{color:#bebebe !important;font-family: 'Noto Sans KR';}
+:-ms-input-placeholder{color:#bebebe;font-family: 'Noto Sans KR';}
+::-ms-input-placeholder{color:#bebebe;font-family: 'Noto Sans KR';}
 ::input-placeholder{color:#bebebe;font-family: 'Noto Sans KR';}
 
 input:-webkit-autofill,

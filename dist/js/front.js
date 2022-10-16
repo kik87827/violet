@@ -159,7 +159,6 @@ DesignModal.prototype.removeHide = function(option) {
 
     if (option !== undefined) {
       if ("closeCallback" in option) {
-        console.log(option)
         option.closeCallback();
       }
     }
