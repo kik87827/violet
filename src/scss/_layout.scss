@@ -20,9 +20,11 @@ html,
         .mid_section{padding:rem(33.33333333333333) rem(20) rem(144.3333333333333)}
     }
     &.layout_type2{
-        .header_wrap{}
-        .mid_section{}
+        display:flex;flex-direction:column;justify-content:space-between;min-height:100vh;
+        .header_wrap{flex:0 0 rem(60);}
+        .mid_section{flex:1;min-height:0;}
         .btn_section{
+            flex:0 0 rem(56.6);margin-top:rem(66.66666666666667);
             > .btn_vsubmit{}
         }
     }

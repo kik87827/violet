@@ -29,60 +29,58 @@
 			<div class="viewform_data_item_group">
 				<div class="viewform_data_item">
 					<div class="view_proitem_row">
-						<div class="view_prothum"><img src="./images/temp_700x700.png" alt=""></div>
+						<div class="view_prothum"><img src="./images/temp_696x696.jpg" alt=""></div>
 						<div class="view_prospec">
 							<div class="prospec_brand">TIFFANY&CO</div>
-							<div class="prospec_item">다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트</div>
+							<div class="prospec_item">다이아몬드 바인 서클 펜던트</div>
 						</div>
 					</div>
 					<div class="item_data_form_row">
-						<textarea class="item_data_ta">
-아이템 메시지 자동출력되고 수정가능하며, 여러줄 출력 스크롤 없이 아래로 계속 늘어나는 방식으로 처리 요청
-						</textarea>
+						<textarea class="item_data_ta" placeholder="내용을 입력해주세요" rows="10" cols="10">아이템 메시지 자동출력되고 수정가능하며, 여러줄 출력 스크롤 없이 아래로 계속 늘어나는 방식으로 처리 요청</textarea>
+						<div class="hidden_data_ta"></div>
 					</div>
 					<div class="form_vitem_group">
 						<div class="form_vitem">
 							<div class="form_vlabel_row">
-								<p clas="form_vlabel">판매가격</p>
+								<p class="form_vlabel">판매가격</p>
 							</div>
 							<div class="form_vform_row">
 								<div class="input_multi_item">
-									<input type="text" class="inline_input">
+									<input type="text" class="inline_input number" value="250,000,000">
 									<span class="inline_unit">원</span>
 								</div>
 							</div>
 						</div>
 						<div class="form_vitem">
 							<div class="form_vlabel_row">
-								<p clas="form_vlabel">카테고리</p>
+								<p class="form_vlabel">카테고리</p>
 							</div>
 							<div class="form_vform_row">
-								<a href="javascript:;" class="btn_select_call"><span class="select_call_text">주얼리</span></a>
+								<a href="javascript:;" class="btn_select_call d_category_modify"><span class="select_call_text">주얼리</span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="viewform_data_item">
 					<div class="view_proitem_row">
-						<div class="view_prothum"><img src="./images/temp_700x700_2.png" alt=""></div>
+						<div class="view_prothum"><img src="./images/temp_696x696_2.jpg" alt=""></div>
 						<div class="view_prospec">
 							<div class="prospec_brand">TIFFANY&CO</div>
 							<div class="prospec_item">다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트다이아몬드 바인 서클 펜던트</div>
 						</div>
 					</div>
 					<div class="item_data_form_row">
-						<textarea class="item_data_ta">
-아이템 메시지 자동출력되고 수정가능하며, 여러줄 출력 스크롤 없이 아래로 계속 늘어나는 방식으로 처리 요청
-						</textarea>
+						<textarea class="item_data_ta" placeholder="내용을 입력해주세요" rows="10" cols="10"></textarea>
+						<div class="hidden_data_ta"></div>
 					</div>
 					<div class="form_vitem_group">
 						<div class="form_vitem">
 							<div class="form_vlabel_row">
-								<p clas="form_vlabel">판매가격</p>
+								<p class="form_vlabel">판매가격</p>
 							</div>
 							<div class="form_vform_row">
 								<div class="input_multi_item">
-									<input type="text" class="inline_input">
+									<input type="text" class="inline_input number">
 									<span class="inline_unit">원</span>
 								</div>
 							</div>
@@ -94,6 +92,38 @@
 		<section class="btn_section">
 			<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">완료</span></a>
 		</section>
+		<!-- popup -->
+		<div class="popup_wrap type2" id="category_modify">
+			<div class="bg_dim"></div>
+			<div class="botpos_vlayer">
+				<div class="botpos_vtitlow">
+					<h3 class="botpos_vtit">카테고리 수정</h3>
+				</div>
+				<div class="botpos_vcontlow">
+					<input type="text" class="form_input" placeholder="카테고리를 입력해 주세요." value="주얼리">
+				</div>
+				<div class="botpos_vbtnlow">
+					<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">다음</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			window.addEventListener("load", () => {
+				resizeForm();
+			});
+
+			// 수정
+			document.querySelectorAll(".d_category_modify").forEach((element) => {
+				element.addEventListener("click", (e) => {
+					e.preventDefault();
+					let category_modifyPopup = new DesignPopup({
+						selector: "#category_modify"
+					});
+				});
+			});
+		</script>
 	</div>
 </body>
 

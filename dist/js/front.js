@@ -41,6 +41,9 @@ function commonEvent() {
   });
 
   function action() {
+    setVh();
+    commonTitle();
+
     function commonTitle() {
       const header_wrap = document.querySelector(".header_wrap");
       const headerTitle = document.querySelector(".header_title");
@@ -65,11 +68,66 @@ function commonEvent() {
         headerTitle.style.paddingRight = headerElementsWidMax + "px";
       }
     }
-    commonTitle();
+
+    function setVh() {
+      const page_wrap2 = document.querySelector(".page_wrap.layout_type2");
+
+      function action() {
+        page_wrap2.style.minHeight = `${window.innerHeight}px`;
+      }
+      action();
+    };
   }
 }
 
+function resizeForm() {
+  const item_data_form_row = document.querySelectorAll(".item_data_form_row");
+  item_data_form_row.forEach((element) => {
+    const thisObj = element;
+    const thisObjTextarea = thisObj.querySelector(".item_data_ta");
+    const thisObjHiddenData = thisObj.querySelector(".hidden_data_ta");
 
+    resizeAction();
+
+    thisObjTextarea.addEventListener("input", (e) => {
+      let etarget = e.target;
+      thisObjHiddenData.remove();
+      inputAction(etarget);
+    });
+
+    thisObjTextarea.addEventListener("focusout", (e) => {
+      let etarget = e.target;
+      if (etarget.value.length === 0) {
+        etarget.style.removeProperty("height");
+      }
+    });
+
+
+  });
+  window.addEventListener("resize", (e) => {
+    let etarget = e.target;
+    resizeAction();
+  });
+
+  function inputAction(target) {
+    let etarget = target;
+
+    etarget.style.height = (etarget.scrollHeight) + 'px';
+  }
+
+  function resizeAction() {
+    item_data_form_row.forEach((element) => {
+      let thisObj = element;
+      let thisObjTextarea = thisObj.querySelector(".item_data_ta");
+      let thisObjHiddenData = thisObj.querySelector(".hidden_data_ta");
+      if (thisObjTextarea.value.length) {
+        thisObjHiddenData.innerHTML = thisObjTextarea.value;
+        thisObjTextarea.style.height = `${thisObjHiddenData.getBoundingClientRect().height}px`;
+      }
+    });
+  }
+
+}
 
 
 function DesignModal(option) {
