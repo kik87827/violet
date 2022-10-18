@@ -68,6 +68,7 @@ function commonEvent() {
     function setVh(){
       const page_wrap2 = document.querySelector(".page_wrap.layout_type2");
       function action(){
+        if(page_wrap2 == null){return;}
         page_wrap2.style.minHeight = `${window.innerHeight}px`;
       }
       action();
