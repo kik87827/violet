@@ -318,7 +318,8 @@ DesignPopup.prototype.bindEvent = function() {
   }
   if (closeItemArray.length) {
     closeItemArray.forEach((element) => {
-      element.addEventListener("click", () => {
+      element.addEventListener("click", (e) => {
+        e.preventDefault();
         this.popupHide(objThis.selector);
       }, false);
     });

@@ -2,9 +2,10 @@
 <html lang="ko">
 @@include('./include/head.html')
 <body class="front_body">
-	<div class="page_wrap">
+	<div class="page_wrap layout_type2">
 		<header class="header_wrap">
-			헤더
+			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+			<h1 class="header_title"><span class="header_title_text">회원가입</span></h1>
 		</header>
 		<section class="mid_section">
 			내용이 들어갑니다.<br>
@@ -95,6 +96,37 @@
 			내용이 들어갑니다.<br>
 			내용이 들어갑니다.
 		</section>
+		<div class="botpos_vbtnlow">
+			<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">다음</span></a>
+		</div>
 	</div>
+	<!-- popup -->
+	<div class="popup_wrap type2" id="samplePopup">
+		<div class="bg_dim"></div>
+		<div class="botpos_vlayer">
+			<div class="botpos_vtitlow"><h3 class="botpos_vtit">약관동의</h3></div>
+			<div class="botpos_vcontlow">
+				내용
+			</div>
+			<div class="botpos_vbtnlow">
+				<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">다음</span></a>
+			</div>
+			<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<!-- // popup -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			var designPopup = new DesignPopup({
+				selector: "#samplePopup"
+			});
+			document.querySelector(".btn_guide").addEventListener("click",()=>{
+				var designPopup = new DesignPopup({
+					selector: "#samplePopup"
+				});
+			});
+			// designPopup.popupHide("#samplePopup"); 닫기
+		});
+	</script>
 </body>
 </html>

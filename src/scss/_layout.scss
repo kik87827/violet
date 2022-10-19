@@ -22,9 +22,9 @@ html,
     &.layout_type2{
         display:flex;flex-direction:column;justify-content:space-between;min-height:100vh;
         .header_wrap{flex:0 0 rem(60);}
-        .mid_section{flex:1;min-height:0;}
+        .mid_section{flex:1;min-height:0;padding-bottom:rem(65)}
         .btn_section{
-            flex:0 0 rem(56.6);margin-top:rem(66.66666666666667);
+            flex:0 0 rem(56.6);
             > .btn_vsubmit{}
         }
     }
@@ -33,6 +33,10 @@ html,
 .btn_history_back{}
 .header_title{display:flex;height:100%;justify-content: center;display:flex;align-items: center;}
 .header_title_text{line-height:1;color:#000;display:inline-block;font-size:rem(18);}
+.header_title_img{
+    display:inline-block;line-height:0;font-size:0;
+    > img{vertical-align: top;width:rem(70)}
+}
 .mid_section{z-index:5;position:relative;padding:rem(33.33333333333333) rem(20) rem(144.3333333333333);
     &.type2{padding:0}
 }

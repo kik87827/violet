@@ -38,15 +38,15 @@
 .bg_dim{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:0;opacity:0;transition:.4s;}
 .popup_titlelow{text-align:center;flex:0 0 rem(60);display:flex;align-items: center;justify-content: center;box-sizing: border-box;}
 .botpos_vbtnlow{text-align:center;flex:0 0 rem(56.6);display:flex;align-items: center;justify-content: center;box-sizing: border-box;}
+.popup_btnlow{text-align:center;flex:0 0 rem(56.6);display:flex;align-items: center;justify-content: center;box-sizing: border-box;}
 .popup_title{line-height:1;color:#000;display:inline-block;font-size:rem(18);padding:0 rem(60);}
-.popup_contentlow{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:rem(12);color:#333333;
+.popup_contentlow{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:rem(12);color:#333333;padding-bottom:rem(66.66666666666667);
     &.type2{
         display:flex;align-items: center;justify-content: center;
     }
 }
 .pcont_wrap{}
 .pcont_inwrap{padding:0;}
-.popup_btnlow{flex:0}
 .popup_wrap.active{display:flex}
 .popup_wrap.active.motion .popup_item{opacity:1;transform: translateY(0);}
 .popup_wrap.active.motion .bg_dim{opacity:.6;}
@@ -56,8 +56,15 @@
 }
 .botpos_vtitlow{padding:rem(26.6) rem(70) rem(26.6) rem(20);flex:0;display:flex;min-height:rem(70);align-items: center;box-sizing: border-box;}
 .botpos_vtit{font-size:rem(18);line-height:1;color:#000}
-.botpos_vcontlow{position:relative;overflow:hidden;overflow-y:auto;padding:rem(12) rem(20) rem(60);flex:1;}
-.btn_vsubmit{display:flex;width:100%;height:100%;justify-content:center;align-items:center;text-align: center;font-size:0;line-height:0;background: linear-gradient(93.54deg, #B754C4 6.24%, #3F4BFF 97.06%);}
+.botpos_vcontlow{position:relative;overflow:hidden;padding:rem(6) rem(20) rem(40);flex:1;display:flex;
+    &.type2{padding:rem(12) rem(20) rem(60);}
+}
+.btn_vsubmit{flex:1;display:flex;width:100%;height:100%;justify-content:center;align-items:center;text-align: center;font-size:0;line-height:0;background: linear-gradient(93.54deg, #B754C4 6.24%, #3F4BFF 97.06%);
+    &.type2{
+        background:#fff;border-top: 1px solid rgba(0, 0, 0, 0.3);
+        .btn_vsubmit_in{color:#000;}
+    }
+}
 .btn_vsubmit_in{display:inline-block;font-size:18px;color:#fff;line-height:1;}
 @media(max-width:1023px){
     
@@ -259,3 +266,7 @@ input.inline_input{border:0;height:rem(43.33333333333333);flex:1;min-width:0;pad
     }   
 }
 .prospec_row{margin-top:rem(12);display:block;}
+
+
+.intro_layer{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;align-items: center;justify-content: center;font-size:0;line-height:0;}
+img.intro_logo{max-width:157px;}
