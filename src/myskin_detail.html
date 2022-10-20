@@ -4,7 +4,8 @@
 <body class="front_body">
 	<div class="page_wrap">
 		<header class="header_wrap">
-			헤더
+			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+			
 		</header>
 		<section class="mid_section">
 			내용이 들어갑니다.<br>
@@ -95,6 +96,39 @@
 			내용이 들어갑니다.<br>
 			내용이 들어갑니다.
 		</section>
+		<!-- popup -->
+		<div class="popup_wrap" id="boast_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">자랑하기</h3>
+				</div>
+				<div class="popup_contentlow type2">
+					<div class="pcont_wrap">
+						<ul class="ico_snsitem_vlist">
+							<li><a href="#" class="ico_snsitem ico_kakao"><span class="snsitem_text">카카오톡</span></a></li>
+							<li><a href="#" class="ico_snsitem ico_insta"><span class="snsitem_text">인스타그램</span></a></li>
+							<li><a href="#" class="ico_snsitem ico_face"><span class="snsitem_text">페이스북</span></a></li>
+							<li><a href="#" class="ico_snsitem ico_url"><span class="snsitem_text">링크 복사</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			document.addEventListener("DOMContentLoaded", function() {
+				if(url_2 === "boast"){
+					let agree_popup = new DesignPopup({
+						selector: "#boast_popup"
+					});
+				}
+			});
+		</script>
 	</div>
 </body>
 </html>

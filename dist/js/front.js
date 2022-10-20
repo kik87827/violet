@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   commonInit();
   commonEvent();
+  commonForm();
 });
 window.addEventListener("load", function() {});
 
@@ -286,7 +287,7 @@ DesignPopup.prototype.popupShow = function(target) {
   this.bg_design_popup = this.selector.querySelector(".popup_wrap .bg_dim");
   this.domBody.append(this.selector);
   this.bindEvent(this.selector);
-
+  commonForm();
 }
 DesignPopup.prototype.popupHide = function(target) {
   var objThis = this;
@@ -325,3 +326,53 @@ DesignPopup.prototype.bindEvent = function() {
     });
   }
 };
+
+
+
+
+
+function commonForm() {
+  // addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+  //   let thisTarget = e.target;
+  //   if (thisTarget.value === "0") {
+  //     thisTarget.classList.add("ready");
+  //   } else {
+  //     console.log(thisTarget.value);
+  //     thisTarget.classList.remove("ready");
+  //   }
+  // });
+  let form_input = document.querySelectorAll(".form_input");
+  if (form_input.length) {
+    form_input.forEach(function(elem, index) {
+      elem.addEventListener("focus", function(e) {
+        focusInAction(e.currentTarget);
+      }, false);
+      elem.addEventListener("keydown", function(e) {
+        focusInAction(e.currentTarget);
+      }, false);
+      elem.addEventListener("keypress", function(e) {
+        focusInAction(e.currentTarget);
+      }, false);
+
+      elem.addEventListener("focusout", function(e) {
+        focusOutAction(e.currentTarget);
+      }, false);
+    });
+  }
+
+  function focusInAction(target) {
+    let currentTarget = target;
+    let currentParent = currentTarget.closest(".form_element_group");
+    if (currentParent !== null) {
+      currentParent.classList.add("active");
+    }
+  }
+
+  function focusOutAction(target) {
+    let currentTarget = target;
+    let currentParent = currentTarget.closest(".form_element_group");
+    if (currentParent !== null && currentTarget.value.length === 0) {
+      currentParent.classList.remove("active");
+    }
+  }
+}
