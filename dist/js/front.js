@@ -263,12 +263,12 @@ function DesignPopup(option) {
   this.btn_close = null;
   this.bg_design_popup = null;
   this.scrollValue = 0;
-  this.popupShow(option.selector);
+  this.popupShow(option);
 }
 
-DesignPopup.prototype.popupShow = function(target) {
+DesignPopup.prototype.popupShow = function(option) {
   var objThis = this;
-  this.selector = document.querySelector(target);
+  this.selector = document.querySelector(option.selector);
   if (this.selector == null) {
     return;
   }
@@ -279,6 +279,9 @@ DesignPopup.prototype.popupShow = function(target) {
   this.selector.classList.add("active");
   setTimeout(function() {
     objThis.selector.classList.add("motion");
+    if ("callback" in option) {
+      option.callback();
+    }
   }, 30);
 
 
@@ -376,3 +379,35 @@ function commonForm() {
     }
   }
 }
+
+function scrollHasCont(target) {
+  if (target === null || target === undefined) {
+    return;
+  }
+  let targetDom = document.querySelectorAll(target);
+  if (targetDom.length === 0) {
+    return;
+  }
+  targetDom.forEach((element) => {
+    let thisElement = element;
+    let thisElementContent = [].slice.call(thisElement.children)[0];
+    thisElementContent.style.marginRight = `-${getScrollBarWidth()}px`
+    //thisElementContent.style.marginRight = `-10px`
+    //thisElement.style.paddingRight = `${thisElement.getBoundingClientRect().width - thisElementContent.getBoundingClientRect().width}px`
+    console.log(thisElementContent);
+  });
+}
+
+
+function getScrollBarWidth() {
+  let outerDivitem = document.createElement('div');
+  let innerDivitem = document.createElement('div');
+  let getWidth = 0;
+  outerDivitem.setAttribute("style", `width: 100px; overflow:scroll; height:100px;outline:1px solid red`)
+  document.body.append(outerDivitem);
+  outerDivitem.append(innerDivitem);
+  innerDivitem.setAttribute("style", `width: 100%;height:110%;`)
+  getWidth = innerDivitem.getBoundingClientRect().width;
+  outerDivitem.remove();
+  return 100 - getWidth;
+};

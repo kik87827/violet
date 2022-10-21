@@ -337,7 +337,9 @@ img.intro_logo{max-width:157px;}
     &:last-of-type{margin-bottom:0;}
 }
 .vform_label{display:block;font-size:rem(13.33);line-height:1;color:#000;margin-bottom:rem(10);}
-.vform_cont{}
+.vform_cont{
+    &.dtype2{display:block;position:relative;overflow-y:auto;max-height:rem(225);margin:0 rem(-20) rem(-40);padding:0 rem(20)}
+}
 .form_element_group{
     border-bottom:1px solid #b3b3b3; display:flex;align-items:center;
     &.active{border-bottom-color:#000;}
@@ -352,6 +354,29 @@ input.form_input{
 
 .result_boxitem{
     display:flex;background:#E8E8E8;align-items: center;padding:rem(16.66) rem(20);margin-bottom:rem(10);
+    &.dtype2{
+        padding:0;background:#fff;
+        &:last-of-type{margin-bottom:rem(10);}
+        border: 1px solid #b3b3b3;
+        > *{padding:0 rem(20);
+            &:first-of-type{padding-top:rem(16.66);}
+            &:last-of-type{padding-bottom:rem(16.66);}
+        }
+        .result_sig_cols{
+            
+        }
+        .result_sub_cols{
+        
+        }
+        &.active{
+            border: 1px solid transparent;
+            background-image: linear-gradient(#fff, #fff), 
+            linear-gradient(to right, #B754C4 0%,  #3F4BFF 100%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+        }
+    }
     &:last-of-type{margin-bottom:0}
 }
 .result_sig_cols{flex:1;min-width:0;}
@@ -363,3 +388,16 @@ input.form_input{
 .result_sig_main{font-weight: 350;font-size: rem(14.66);line-height:1.3;}
 .result_sig_sub{color: #000000;opacity: 0.7;font-size:rem(12);font-weight:300;margin-top:rem(5);}
 .btn_textcontrol{display:inline-block;white-space: nowrap;color:#000;text-decoration: underline;font-size:rem(11.33)}
+
+.form_guide_wrap{font-size:rem(11.33);line-height:1.3;margin-top:rem(20)}
+.form_guide_title{color:#000;}
+.form_guide_cont{margin-top:rem(8.33)}
+.form_guide{
+    font-weight: 300;
+    strong{color:#000;font-weight: 400;}
+}
+
+.result_data_group{margin-top:rem(20)}
+.result_data_label{color:#000;line-height:1;font-size:rem(14.66);margin-bottom:rem(10);}
+
+.result_data_cont{display:block;position:relative;overflow-y:auto;max-height:rem(225);margin:0 rem(-20) rem(-40);padding:0 rem(20)}
