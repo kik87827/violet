@@ -401,3 +401,15 @@ input.form_input{
 .result_data_label{color:#000;line-height:1;font-size:rem(14.66);margin-bottom:rem(10);}
 
 .result_data_cont{display:block;position:relative;overflow-y:auto;max-height:rem(225);margin:0 rem(-20) rem(-40);padding:0 rem(20)}
+
+.mid_copy_group{display:block;text-align: center;}
+.mid_copy_title{color:#000;line-height:1;font-size:rem(20);}
+.mid_copy_sub{margin-top:rem(11.66);line-height:1.3;}
+.mid_copy_sub_2{margin-top:rem(32);line-height:1.3;font-size:rem(12)}
+.mid_copy_design_obj{background:#000;opacity:0.5;width:1px;height:rem(66);margin:rem(20) auto;}
+.img_data_cont_wrap{}
+.img_data_row{
+    display:flex;align-items:center;justify-content:center;width:rem(192.33);height:rem(192.33);background:#F7F7F7;margin:0 auto;
+    > img{width:rem(111.66);height:rem(111.66);}
+}
+.img_data_guide{color:#000;font-size:rem(14.66);margin-top:rem(20);text-align: center;}
