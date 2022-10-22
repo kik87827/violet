@@ -45,13 +45,13 @@ html,
 }
 .btn_history_back{display:flex;align-items:center;justify-content:center;width:rem(55);height:rem(60);position:absolute;top:0;left:0;}
 .btn_history_back:after{
-    display:block;content:'';width:rem(12);height:rem(12);border-left:rem(2) solid #111;border-bottom:rem(2) solid #111;position:absolute;top:50%;left:50%;margin:rem(-7) 0 0 rem(-5);
+    display:block;content:'';width:rem(12);height:rem(12);border-left:rem(1.5) solid #111;border-bottom:rem(1.5) solid #111;position:absolute;top:50%;left:50%;margin:rem(-7) 0 0 rem(-5);
     transform: translateZ(0) rotate(45deg);
 }
 
 .btn_closeitem{display:block;width:rem(55);height:rem(60);position:absolute;top:0;right:0;font-size:0;line-height:0;}
 .btn_closeitem:before,
-.btn_closeitem:after{width:rem(24);height:rem(2);display:block;content:'';position:absolute;top:50%;left:50%;background:#000; margin:-1px 0 0 rem(-12);
+.btn_closeitem:after{width:rem(24);height:rem(1);display:block;content:'';position:absolute;top:50%;left:50%;background:#000; margin:rem(-0.5) 0 0 rem(-12);
     transform: translateZ(0);-webkit-transform: translateZ(0);-ms-transform: translateZ(0);-moz-transform: translateZ(0);
 }
 .btn_closeitem:before{transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);}

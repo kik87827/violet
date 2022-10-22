@@ -367,7 +367,7 @@ function commonForm() {
   function focusOutAction(target){
       let currentTarget = target;
       let currentParent = currentTarget.closest(".form_element_group");
-      if(currentParent !== null && currentTarget.value.length===0){
+      if(currentParent !== null){
         currentParent.classList.remove("active");
       }
   }

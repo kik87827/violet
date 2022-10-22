@@ -16,10 +16,10 @@
 </head>
 
 <body class="front_body">
-	<div class="page_wrap layout_type2">
+	<div class="page_wrap">
 		<header class="header_wrap">
 			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
-			<h1 class="header_title"><span class="header_title_text">정품등록</span></h1>
+			<h1 class="header_title"><span class="header_title_text">타이틀</span></h1>
 		</header>
 		<section class="mid_section">
 			내용이 들어갑니다.<br>
@@ -110,73 +110,6 @@
 			내용이 들어갑니다.<br>
 			내용이 들어갑니다.
 		</section>
-		<!-- popup -->
-		<div class="popup_wrap type2" id="service_type_popup">
-			<div class="bg_dim"></div>
-			<div class="botpos_vlayer">
-				<div class="botpos_vtitlow">
-					<h3 class="botpos_vtit">아이템 정보 입력방식 선택</h3>
-				</div>
-				<div class="botpos_vcontlow type3">
-					<div class="boxprops_list_wrap">
-						<ul class="boxprops_list type2">
-							<li>
-								<input type="radio" class="boxprops" id="item_type_01" name="item_type">
-								<label class="boxprops_label" for="item_type_01"><span class="boxprops_label_text">QR/바코드 스캔하기</span></label>
-							</li>
-							<li>
-								<input type="radio" class="boxprops" id="item_type_02" name="item_type">
-								<label class="boxprops_label" for="item_type_02"><span class="boxprops_label_text">이미지 불러오기</span></label>
-							</li>
-							<li>
-								<input type="radio" class="boxprops" id="item_type_03" name="item_type">
-								<label class="boxprops_label" for="item_type_03"><span class="boxprops_label_text">시리얼 번호 직접 입력하기</span></label>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
-			</div>
-		</div>
-		<div class="popup_wrap type2" id="serial_popup">
-			<div class="bg_dim"></div>
-			<div class="botpos_vlayer">
-				<div class="botpos_vtitlow">
-					<h3 class="botpos_vtit">시리얼 번호 입력</h3>
-				</div>
-				<div class="botpos_vcontlow type3">
-					<div class="vertical_form_group">
-						<div class="vertical_form">
-							<div class="vform_cont">
-								<div class="form_element_group warn">
-									<input type="text" class="form_input" placeholder="시리얼 번호를 입력하세요." value="123456789">
-								</div>
-								<p class="form_warn_text">올바른 시리얼 번호를 입력해 주세요.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
-			</div>
-		</div>
-		<!-- // popup -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				// 퍼블확인용
-				let url = window.location.href.split('?')[1];
-				let url_2 = url !== undefined ? url.split('#')[0] : null;
-				if (url_2 === "type") {
-					let agree_popup = new DesignPopup({
-						selector: "#service_type_popup"
-					});
-				} else if (url_2 === "serial") {
-					let agree_popup = new DesignPopup({
-						selector: "#serial_popup"
-					});
-				}
-				// designPopup.popupHide("#samplePopup"); 닫기
-			});
-		</script>
 	</div>
 </body>
 
