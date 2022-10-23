@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   commonInit();
   commonEvent();
   commonForm();
+  bottomLayer();
 });
 window.addEventListener("load", function() {});
 
@@ -400,3 +401,19 @@ function getScrollBarWidth() {
   outerDivitem.remove();
   return 100 - getWidth;
 };
+
+function bottomLayer(){
+  const bottom_layer = document.querySelector(".bottom_layer");
+  const page_wrap = document.querySelector(".page_wrap");
+  
+  action();
+  window.addEventListener("resize",()=>{
+    action();
+  });
+
+  function action(){
+    if(bottom_layer !== null){
+      page_wrap.style.paddingBottom = `${bottom_layer.getBoundingClientRect().height}px`;
+    }
+  }
+}

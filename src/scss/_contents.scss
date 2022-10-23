@@ -62,6 +62,7 @@
     &.type3{padding-top:0;}
     > *{width:100%;}
 }
+.btn_vsubmit_fxwrap{display:flex;align-items: center;height:rem(56.6);width:100%;-webkit-appearance: none;appearance: none;}
 .btn_vsubmit{flex:1;display:flex;width:100%;height:100%;position:relative;justify-content:center;align-items:center;text-align: center;font-size:0;line-height:0;background: linear-gradient(93.54deg, #B754C4 6.24%, #3F4BFF 97.06%);
 
 
@@ -169,7 +170,13 @@ input.form_input:-ms-input-placeholder{color:#000;opacity: 0.5;}
 input.form_input::-ms-input-placeholder{color:#000;opacity: 0.5;}
 input.form_input::input-placeholder{color:#000;opacity: 0.5;}
 
-.props_form_item{font-size:0;line-height:0;display:inline-flex;align-items: center;}
+.props_form_item{font-size:0;line-height:0;display:inline-flex;align-items: center;
+    &.dtype2{
+        input.props_form{
+            &:checked{}
+        }
+    }
+}
 input.props_form{
     display:inline-block;vertical-align:middle;cursor:pointer;flex:0 0 rem(22.66);width:rem(22.66);height:rem(22.66);background:url("../images/ico_chk2.png") no-repeat 0 0/100% auto;border:1px solid #b7b7b7;border-radius:100%;appearance: none;-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;
     &:checked{background-position:0 100%,0 0;
@@ -185,7 +192,7 @@ input.props_form{
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-.btn_inlinebox_text{padding:0 rem(15);display:inline-block;font-weight: 350;font-size:rem(11.33);}
+.btn_inlinebox_text{padding:0 rem(15);display:inline-block;font-weight: 350;font-size:rem(11.33);line-height:1;}
 .props_label{display:inline-block;font-size:rem(13.33);line-height:1;color:#000000;margin-left:rem(8.33);cursor:pointer;}
 
 .view_title_row{padding:rem(30) rem(20) rem(15)}
@@ -480,3 +487,178 @@ input.boxprops:checked + .boxprops_label{
 }
 
 .form_topcopy{color:#000000;font-size:rem(13.33);line-height:1.3;margin-bottom:rem(18)}
+
+.agree_props_zone{}
+.agree_total_low{
+    .props_form_item{}
+}
+.agree_detail_low{}
+.agree_detail_list{
+    > li{
+        &:last-of-type{}
+        .props_form_item{}
+    }
+}
+.btn_props_tail{
+    &:after{}
+}
+
+.term_intro_group{}
+.term_intro_para{
+    &:last-of-type{}
+}
+
+.term_menu_group{}
+.term_menu_list{
+    > li{}
+}
+.term_menu{}
+
+.term_cont_group{}
+.term_cont{
+    &:last-of-type{}
+}
+.term_ctitle{}
+.term_cmain{}
+
+.ico_useguide_list_wrap{}
+.ico_useguide_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+
+.ico_useguide_list_wrap{}
+.ico_useguide_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.ico_useguide{
+    &:before{}
+    &.ico_01:before{}
+    &.ico_02:before{}
+    &.ico_03:before{}
+    &.ico_04:before{}
+}
+.useguide_text_group{}
+.useguide_text_main{}
+.useguide_text_sub{}
+
+.app_guide_group{}
+.app_banner_wrap{}
+.app_banner{
+    > img{}
+}
+.app_banner_copy{}
+
+
+.skin_list_wrap{
+
+}
+
+.skin_list{
+    > li{
+        &.nodata_li{
+            .nodata_para{}  
+        }
+    }
+}
+.skin_item{}
+.skin_layer{}
+.skin_label{}
+
+.view_item_wrap{}
+.view_item_title{}
+.view_item_content{
+    .skin_item{}
+}
+.view_else_wrap{
+    .item_data_form_row{}
+    .vertical_form_group{}
+}
+
+.boxgrid_item_list_wrap{
+    &.type2{}
+}
+.boxgrid_item_list{
+    > li{}
+}
+
+.boxgrid_item{
+    &.current_end{
+        .boxgrid_title{}
+        .boxgrid_ico{
+            &:before{}
+        }
+    }
+}
+.boxgrid_title{}
+.boxgrid_ico{
+    &:before{}
+    &.ico_01:before{}
+    &.ico_02:before{}
+    &.ico_03:before{}
+    &.ico_04:before{}
+    &.ico_05:before{}
+}
+.btn_boxgrid_else_wrap{
+    .text_control_item{}
+}
+.text_control_item{}
+
+.copy_hitem_group{}
+.copy_hitem_text_g{
+    > .btn_linebox{}
+}
+.copy_htext_main{}
+.copy_htext_sub{}
+
+.info_message_group{}
+.info_message_title_wrap{
+    &:before{}
+}
+.info_message_title{}
+.info_message_cont{
+    .indent_item_list{}
+}
+.indent_item_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.indent_bullet{}
+.indent_content{}
+.indent_parawrap{
+    .ico_qus{}
+}
+.indent_para{}
+.ico_qus{}
+
+
+.btn_linebox_top_row{
+    .btn_linebox{}
+}
+
+.btn_bottomsubmit_wrap{}
+
+.finish_guide_zone{}
+.finish_guide_main{
+    .ico_finish{}
+}
+.ico_finish{}
+.finish_ment_group{}
+
+.finish_guide_tail{}
+.result_tail_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.result_tail_label{}
+.result_tail_data{}
+
+.message_box_row{}
+.mesage_sigpara{
+    strong{}
+}

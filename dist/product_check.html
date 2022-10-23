@@ -22,94 +22,52 @@
 			<h1 class="header_title"><span class="header_title_text">정품확인하기</span></h1>
 		</header>
 		<section class="mid_section">
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.<br>
-			내용이 들어갑니다.
+			<div class="mid_copy_group">
+				<h2 class="mid_copy_title">정품인증 아이템인지 확인하세요</h2>
+				<p class="mid_copy_sub">제품의 QR 또는 바코드를<br>준비가 되면 아이템 스캔하기를 눌러주세요.</p>
+			</div>
+			<div class="boxgrid_item_list_wrap">
+				<ul class="boxgrid_item_list">
+					<li name="normal">
+						<a href="#" class="boxgrid_item">
+							<div class="boxgrid_title">아이템<br>스캔하기</div>
+							<div class="boxgrid_ico ico_01"></div>
+						</a>
+					</li>
+					<li name="end" style="display:none">
+						<a href="#" class="boxgrid_item current_end">
+							<div class="boxgrid_title">정품인증 아이템<br>스캔 완료</div>
+							<div class="boxgrid_ico ico_01"></div>
+						</a>
+						<div class="btn_boxgrid_else_wrap"><a href="#" class="text_control_item">재스캔하기</a></div>
+					</li>
+				</ul>
+			</div>
 		</section>
+		<section class="bottom_section type2" name="normal" style="display:none">
+			<div class="copy_hitem_group">
+				<div class="copy_hitem_text_g">
+					<p class="copy_htext_main">궁금한 사항이 있으세요?</p>
+					<p class="copy_htext_sub">신속하게 답변 드리겠습니다</p>
+				</div>
+				<a href="#" class="btn_linebox"><span class="linebox_text">문의하러 가기</span></a>
+			</div>
+		</section>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				if (url_2 === "perfect") {
+					document.querySelectorAll("[name='normal']").forEach((element) => {
+						element.style.display = "none";
+					});
+					document.querySelectorAll("[name='end']").forEach((element) => {
+						element.style.display = "block";
+					});
+				}
+			});
+		</script>
 	</div>
 </body>
 

@@ -98,7 +98,46 @@
 			<div class="botpos_vlayer">
 				<div class="botpos_vtitlow"><h3 class="botpos_vtit">약관동의</h3></div>
 				<div class="botpos_vcontlow">
-					내용이 들어갑니다.
+					<div class="agree_props_zone">
+						<div class="agree_total_low">
+							<div class="props_form_item">
+								<input type="checkbox" id="props_all" class="props_form">
+								<label for="props_all" class="props_label">전체 동의하기</label>
+							</div>
+						</div>
+						<div class="agree_detail_low">
+							<ul class="agree_detail_list">
+								<li>
+									<div class="props_form_item dtype2">
+										<input type="checkbox" id="props_01" class="props_form">
+										<label for="props_01" class="props_label">개인 정보 이용 동의</label>
+									</div>
+									<a href="#agree_tail01_popup" class="btn_props_tail"><span class="hdtext">자세히보기</span></a>
+								</li>
+								<li>
+									<div class="props_form_item dtype2">
+										<input type="checkbox" id="props_02" class="props_form">
+										<label for="props_02" class="props_label">고유식별정보 처리 동의</label>
+									</div>
+									<a href="#agree_tail02_popup" class="btn_props_tail"><span class="hdtext">자세히보기</span></a>
+								</li>
+								<li>
+									<div class="props_form_item dtype2">
+										<input type="checkbox" id="props_03" class="props_form">
+										<label for="props_03" class="props_label">서비스 이용 약관 동의</label>
+									</div>
+									<a href="#agree_tail03_popup" class="btn_props_tail"><span class="hdtext">자세히보기</span></a>
+								</li>
+								<li>
+									<div class="props_form_item dtype2">
+										<input type="checkbox" id="props_04" class="props_form">
+										<label for="props_04" class="props_label">통신사 이용 약관 동의</label>
+									</div>
+									<a href="#agree_tail04_popup" class="btn_props_tail"><span class="hdtext">자세히보기</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="botpos_vbtnlow">
 					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">다음</span></a>
@@ -106,10 +145,312 @@
 				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
 			</div>
 		</div>
+		<div class="popup_wrap" id="agree_tail01_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">개인 정보 이용 동의</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						<div class="term_intro_group">
+							<p class="term_intro_para">
+								바이올렛에서 운영하는 정품인증 오픈 플랫폼
+								(www.violet.io, 이하 "사이트"라고 함)은 고객님이 
+								서비스를 이용하기 위해 제공한 개인정보를 매우 
+								소중히 여기며, 「개인정보보호법」및「정보통신망 
+								이용촉진 및 정보보호 등에 관한 법률」등 관련법령에 
+								따라 고객님의 개인정보를 적극적으로 보호하기 위해 
+								개인정보처리방침을 제정하고 이를 준수하고 
+								있습니다.
+							</p>
+							<p class="term_intro_para">
+								㈜비단주머니는 다음과 같이 개인정보처리방침을 
+								두고 있으며, 개인정보처리방침을 개정하는 경우, 
+								해당 웹사이트 공지(또는 개별 공지)를 통해 공고할 
+								예정입니다.
+							</p>
+						</div>
+						<div class="term_menu_group">
+							<ul class="term_menu_list">
+								<li><a href="#term01" class="term_menu">제1조 개인정보 수집 및 이용목적</a></li>
+								<li><a href="#term02" class="term_menu">제2조 개인정보의 수집항목 및 수집방법</a></li>
+								<li><a href="#term03" class="term_menu">제3조 개인정보의 보유 및 이용 기간</a></li>
+								<li><a href="#term04" class="term_menu">제4조 개인정보의 파기 절차 및 방법</a></li>
+								<li><a href="#term05" class="term_menu">제5조 개인정보의 제3자 제공</a></li>
+								<li><a href="#term06" class="term_menu">제6조 개인정보 위탁업체 및 업무내용</a></li>
+								<li><a href="#term07" class="term_menu">제7조 수집한 개인정보의 국외 이전</a></li>
+								<li><a href="#term08" class="term_menu">제8조 쿠키(cookie)의 운용 및 활용</a></li>
+								<li><a href="#term09" class="term_menu">제9조 개인정보의 열람, 정정, 탈퇴 및 동의 철회 방법</a></li>
+								<li><a href="#term10" class="term_menu">제10조 개인정보의 기술적/관리적 보호 대책</a></li>
+								<li><a href="#term11" class="term_menu">제11조 광고성 정보 전송</a></li>
+								<li><a href="#term12" class="term_menu">제12조 개인정보관리책임자</a></li>
+							</ul>
+						</div>
+						<!-- <div class="term_cont_group">
+							<div class="term_cont" id="term01">
+								<p class="term_ctitle">제1조 개인정보 수집 및 이용목적</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term02">
+								<p class="term_ctitle">제2조 개인정보의 수집항목 및 수집방법</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term03">
+								<p class="term_ctitle">제3조 개인정보의 보유 및 이용 기간</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term04">
+								<p class="term_ctitle">제4조 개인정보의 파기 절차 및 방법</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term05">
+								<p class="term_ctitle">제5조 개인정보의 제3자 제공</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term06">
+								<p class="term_ctitle">제6조 개인정보 위탁업체 및 업무내용</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term07">
+								<p class="term_ctitle">제7조 수집한 개인정보의 국외 이전</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term08">
+								<p class="term_ctitle">제8조 쿠키(cookie)의 운용 및 활용</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term09">
+								<p class="term_ctitle">제9조 개인정보의 열람, 정정, 탈퇴 및 동의 철회 방법</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term10">
+								<p class="term_ctitle">제10조 개인정보의 기술적/관리적 보호 대책</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term11">
+								<p class="term_ctitle">제11조 광고성 정보 전송</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+							<div class="term_cont" id="term12">
+								<p class="term_ctitle">제12조 개인정보관리책임자</p>
+								<div class="term_cmain">
+									내용 미수급
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div class="popup_btnlow">
+					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">약관동의</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="agree_tail02_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">고유식별정보 처리 동의</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<div class="popup_btnlow">
+					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">약관동의</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="agree_tail03_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">서비스 이용 약관 동의</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<div class="popup_btnlow">
+					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">약관동의</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="agree_tail04_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_titlelow">
+					<h3 class="popup_title">통신사 이용 약관 동의</h3>
+				</div>
+				<div class="popup_contentlow">
+					<div class="pcont_inwrap">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<div class="popup_btnlow">
+					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">약관동의</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
 		<!-- // popup -->
 		<script>
 
-			
+			// 자세히 보기 popup 클릭
+			document.querySelectorAll(".btn_props_tail").forEach((element)=>{
+				element.addEventListener("click",(e)=>{
+					e.preventDefault();
+					let thisEventObj = e.currentTarget;
+					let thisEventTaret = thisEventObj.getAttribute("href")
+					let agree_popup = new DesignPopup({
+						selector: thisEventTaret
+					});
+				});
+			});
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
