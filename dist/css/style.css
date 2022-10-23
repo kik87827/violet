@@ -2975,7 +2975,7 @@ input.props_form {
   flex: 0 0 1.41625rem;
   width: 1.41625rem;
   height: 1.41625rem;
-  background: url("../images/ico_chk.png") no-repeat 0 0/100% auto;
+  background: url("../images/ico_chk2.png") no-repeat 0 0/100% auto;
   border: 1px solid #b7b7b7;
   border-radius: 100%;
   appearance: none;
@@ -3017,6 +3017,7 @@ input.props_form:checked {
   line-height: 1;
   color: #000000;
   margin-left: 0.520625rem;
+  cursor: pointer;
 }
 
 .view_title_row {

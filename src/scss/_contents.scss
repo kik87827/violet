@@ -171,7 +171,7 @@ input.form_input::input-placeholder{color:#000;opacity: 0.5;}
 
 .props_form_item{font-size:0;line-height:0;display:inline-flex;align-items: center;}
 input.props_form{
-    display:inline-block;vertical-align:middle;cursor:pointer;flex:0 0 rem(22.66);width:rem(22.66);height:rem(22.66);background:url("../images/ico_chk.png") no-repeat 0 0/100% auto;border:1px solid #b7b7b7;border-radius:100%;appearance: none;-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;
+    display:inline-block;vertical-align:middle;cursor:pointer;flex:0 0 rem(22.66);width:rem(22.66);height:rem(22.66);background:url("../images/ico_chk2.png") no-repeat 0 0/100% auto;border:1px solid #b7b7b7;border-radius:100%;appearance: none;-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;
     &:checked{background-position:0 100%,0 0;
         border: 1px solid transparent;
         background-image: url("../images/ico_chk.png"), 
@@ -186,7 +186,7 @@ input.props_form{
     background-clip: content-box, border-box;
 }
 .btn_inlinebox_text{padding:0 rem(15);display:inline-block;font-weight: 350;font-size:rem(11.33);}
-.props_label{display:inline-block;font-size:rem(13.33);line-height:1;color:#000000;margin-left:rem(8.33)}
+.props_label{display:inline-block;font-size:rem(13.33);line-height:1;color:#000000;margin-left:rem(8.33);cursor:pointer;}
 
 .view_title_row{padding:rem(30) rem(20) rem(15)}
 .view_title_count{
