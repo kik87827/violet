@@ -44,7 +44,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="bottom_section type2" name="normal" style="display:none">
+		<section class="bottom_section type5" name="normal" style="display:none">
 			<div class="copy_hitem_group">
 				<div class="copy_hitem_text_g">
 					<p class="copy_htext_main">궁금한 사항이 있으세요?</p>
@@ -63,8 +63,10 @@
 						element.style.display = "none";
 					});
 					document.querySelectorAll("[name='end']").forEach((element) => {
-						element.style.display = "block";
+						element.style.removeProperty("display");
+						element.classList.add("active");
 					});
+					document.querySelector(".bottom_section").style.display = "block";
 				}
 			});
 		</script>

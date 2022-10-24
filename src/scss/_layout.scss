@@ -46,6 +46,7 @@ html,
     &.type2{padding:rem(60) 0}
     &.type3{padding:0}
     &.type4{padding:0 rem(20) rem(60)}
+    &.type5{padding:0 rem(20) rem(40)}
 }
 .btn_history_back{display:flex;align-items:center;justify-content:center;width:rem(55);height:rem(60);position:absolute;top:0;left:0;}
 .btn_history_back:after{
