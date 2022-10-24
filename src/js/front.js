@@ -32,18 +32,42 @@ function commonInit() {
 }
 
 function commonEvent() {
+  const page_wrap2 = document.querySelector(".page_wrap.layout_type2");
   let windowWidth = 0;
   action();
+  setVh();
   window.addEventListener("resize", () => {
     if (windowWidth === window.innerWidth) {
       return;
     }
+    setVh();
     action();
     windowWidth = window.innerWidth;
   });
+  window.addEventListener("touchmove",()=>{
+    if(window.scrollY === 0){
+      setVh();
+    }
+  });
+  // let div = document.createElement("div");
+  // div.setAttribute("style","position:fixed;top:0;right:0;background:red;color:#fff;padding:10px;z-index:10000000");
+  // div.setAttribute("id","test");
+  // document.querySelector("body").append(div);
+  
+  function setVh(){
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    function action(){
+      if(page_wrap2 == null){return;}
+      page_wrap2.style.minHeight = `${window.innerHeight}px`;
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    action();
+  };
 
   function action() {
-    setVh();
     commonTitle();
     function commonTitle(){
       const header_wrap = document.querySelector(".header_wrap");
@@ -67,14 +91,6 @@ function commonEvent() {
         headerTitle.style.paddingRight = headerElementsWidMax + "px";
       }
     }
-    function setVh(){
-      const page_wrap2 = document.querySelector(".page_wrap.layout_type2");
-      function action(){
-        if(page_wrap2 == null){return;}
-        page_wrap2.style.minHeight = `${window.innerHeight}px`;
-      }
-      action();
-    };
   }
 }
 

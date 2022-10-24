@@ -12,7 +12,7 @@
 				<h2 class="mid_copy_title">정품인증 확인</h2>
 				<p class="mid_copy_sub">아이템 정보 입력방식을 선택해주세요</p>
 			</div>
-			<div class="message_box_row" style="display:none">
+			<div class="message_box_row">
 				<p class="mesage_sigpara">정품인증 조회결과 <br><strong>정품으로 등록된 아이템</strong>입니다</p>
 			</div>
 			<div class="boxgrid_item_list_wrap type2">
@@ -75,7 +75,7 @@
 						selector: "#serial_popup"
 					});		
 				}else if(url_2 === "result"){
-					document.querySelector(".message_box_row").style.display = "block";
+					document.querySelector(".message_box_row").classList.add("active");
 					document.querySelector(".bottom_layer").style.display = "block";
 				}
 				// designPopup.popupHide("#samplePopup"); 닫기
