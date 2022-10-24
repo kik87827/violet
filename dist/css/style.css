@@ -4139,6 +4139,10 @@ input.boxprops:checked + .boxprops_label:before {
 .boxgrid_item_list_wrap {
   margin-top: 3.125rem;
 }
+.boxgrid_item_list_wrap.type2 .boxgrid_item_list {
+  justify-content: flex-start;
+}
+
 .boxgrid_item_list {
   display: flex;
   flex-wrap: wrap;

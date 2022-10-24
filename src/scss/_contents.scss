@@ -604,7 +604,9 @@ input.boxprops:checked + .boxprops_label{
 
 .boxgrid_item_list_wrap{
     margin-top:rem(50);
-    &.type2{}
+    &.type2{
+        .boxgrid_item_list{justify-content:flex-start;}
+    }
 }
 .boxgrid_item_list{
     display:flex;flex-wrap:wrap;margin:rem(-7.77);justify-content:center;
