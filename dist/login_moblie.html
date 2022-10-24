@@ -168,7 +168,7 @@
 					<h3 class="popup_title">개인 정보 이용 동의</h3>
 				</div>
 				<div class="popup_contentlow">
-					<div class="pcont_inwrap">
+					<div class="pcont_inwrap type2">
 						<div class="term_intro_group">
 							<p class="term_intro_para">
 								바이올렛에서 운영하는 정품인증 오픈 플랫폼
@@ -292,7 +292,7 @@
 					<h3 class="popup_title">고유식별정보 처리 동의</h3>
 				</div>
 				<div class="popup_contentlow">
-					<div class="pcont_inwrap">
+					<div class="pcont_inwrap type2">
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
@@ -348,7 +348,7 @@
 					<h3 class="popup_title">서비스 이용 약관 동의</h3>
 				</div>
 				<div class="popup_contentlow">
-					<div class="pcont_inwrap">
+					<div class="pcont_inwrap type2">
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
@@ -404,7 +404,7 @@
 					<h3 class="popup_title">통신사 이용 약관 동의</h3>
 				</div>
 				<div class="popup_contentlow">
-					<div class="pcont_inwrap">
+					<div class="pcont_inwrap type2">
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
@@ -455,18 +455,6 @@
 		</div>
 		<!-- // popup -->
 		<script>
-			// 자세히 보기 popup 클릭
-			document.querySelectorAll(".btn_props_tail").forEach((element) => {
-				element.addEventListener("click", (e) => {
-					e.preventDefault();
-					let thisEventObj = e.currentTarget;
-					let thisEventTaret = thisEventObj.getAttribute("href")
-					let agree_popup = new DesignPopup({
-						selector: thisEventTaret
-					});
-				});
-			});
-
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
 			let url_2 = url !== undefined ? url.split('#')[0] : null;
@@ -478,10 +466,36 @@
 					})
 				} else if (url_2 === "agree") {
 					let agree_popup = new DesignPopup({
-						selector: "#agree_popup"
+						selector: "#agree_popup",
+						callback() {
+							agreeFunc();
+						}
 					});
 				}
 			});
+
+			function agreeFunc() {
+				const agree_props_zone = document.querySelector(".agree_props_zone");
+				const props_all = agree_props_zone.querySelector("#props_all");
+				const props_tail = agree_props_zone.querySelectorAll(".agree_detail_low .props_form");
+				props_all.addEventListener("click", (e) => {
+					props_tail.forEach((element) => {
+						element.checked = e.currentTarget.checked;
+					});
+				});
+
+				// 자세히 보기 popup 클릭
+				document.querySelectorAll(".btn_props_tail").forEach((element) => {
+					element.addEventListener("click", (e) => {
+						e.preventDefault();
+						let thisEventObj = e.currentTarget;
+						let thisEventTaret = thisEventObj.getAttribute("href")
+						let agree_popup = new DesignPopup({
+							selector: thisEventTaret
+						});
+					});
+				});
+			}
 		</script>
 	</div>
 </body>

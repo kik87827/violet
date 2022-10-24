@@ -46,7 +46,10 @@
     }
 }
 .pcont_wrap{}
-.pcont_inwrap{padding:0;}
+.pcont_inwrap{
+    padding:0;
+    &.type2{padding:rem(33) rem(20) 0}
+}
 .popup_wrap.active{display:flex}
 .popup_wrap.active.motion .popup_item{opacity:1;transform: translateY(0);}
 .popup_wrap.active.motion .bg_dim{opacity:.6;}
@@ -173,8 +176,10 @@ input.form_input::input-placeholder{color:#000;opacity: 0.5;}
 .props_form_item{font-size:0;line-height:0;display:inline-flex;align-items: center;
     &.dtype2{
         input.props_form{
+            background-image:url("../images/ico_chk3.png");border-color:transparent;
             &:checked{}
         }
+        .props_label{font-weight: 300;font-size: 12px;}
     }
 }
 input.props_form{
@@ -490,39 +495,52 @@ input.boxprops:checked + .boxprops_label{
 
 .agree_props_zone{}
 .agree_total_low{
-    .props_form_item{}
+    margin-bottom:rem(17);line-height:0;
+    .props_form_item{vertical-align: top;}
 }
 .agree_detail_low{}
 .agree_detail_list{
+    line-height:0;
     > li{
-        &:last-of-type{}
-        .props_form_item{}
+        margin-bottom:rem(7); display:flex;align-items:center;justify-content:space-between;
+        &:last-of-type{margin-bottom:0;}
+        .props_form_item{vertical-align: top;}
     }
 }
 .btn_props_tail{
-    &:after{}
+    display:inline-block;width:rem(22.66);height:rem(22.66);position:relative;left:rem(5);
+    &:after{
+        display:block;content:'';width:rem(6.5);height:rem(6.5);border-left:rem(1) solid #4d4d4d;border-bottom:rem(1) solid #4d4d4d;position:absolute;top:rem(8);left:rem(5);transform: translateZ(0) rotate(225deg);
+    }
 }
 
-.term_intro_group{}
+.term_intro_group{font-size:rem(14.66);color:#000;}
 .term_intro_para{
-    &:last-of-type{}
+    margin-bottom:rem(10);
+    &:last-of-type{margin-bottom:0;}
 }
 
-.term_menu_group{}
+.term_menu_group{margin-top:rem(25);}
+.term_menu_title{margin-bottom:rem(6);font-size:rem(14.66);color:#000;font-weight:500;line-height:1;}
 .term_menu_list{
-    > li{}
+    > li{
+        margin-bottom:rem(5);
+        &:last-of-type{margin-bottom:0;}
+    }
 }
-.term_menu{}
+.term_menu{font-size:rem(14.66);color:#000;display:inline-block;}
 
-.term_cont_group{}
+.term_cont_group{margin-top:rem(30);padding-top:rem(30);border-top:1px solid #ddd;}
 .term_cont{
-    &:last-of-type{}
+    margin-bottom:rem(25);
+    &:last-of-type{margin-bottom:0;}
 }
-.term_ctitle{}
+.term_ctitle{font-size:rem(14.66);color:#000;margin-bottom:rem(6);font-weight:500;}
 .term_cmain{}
 
-.ico_useguide_list_wrap{}
+.ico_useguide_list_wrap{text-align: center;}
 .ico_useguide_list{
+    display:inline-block;text-align:left;
     > li{
         &:last-of-type{}
     }
@@ -531,26 +549,30 @@ input.boxprops:checked + .boxprops_label{
 .ico_useguide_list_wrap{}
 .ico_useguide_list{
     > li{
-        &:last-of-type{}
+        margin-bottom:rem(15);
+        &:last-of-type{margin-bottom:0;}
     }
 }
 .ico_useguide{
-    &:before{}
-    &.ico_01:before{}
-    &.ico_02:before{}
-    &.ico_03:before{}
-    &.ico_04:before{}
+    display:flex;align-items:center;
+    &:before{display:block;content:'';width:rem(50);height:rem(50);flex:0 0 rem(50);border-radius:100%;background: rgba(0, 0, 0, 0.1) url("../images/ico_use.png") no-repeat 0 0/100% auto;}
+    &.ico_01:before{background-position:0 0;}
+    &.ico_02:before{background-position:0 33.3333333%;}
+    &.ico_03:before{background-position:0 66.6666666%;}
+    &.ico_04:before{background-position:0 100%;}
 }
-.useguide_text_group{}
-.useguide_text_main{}
-.useguide_text_sub{}
+.useguide_text_group{margin-left:rem(20);}
+.useguide_text_main{color: #000000;line-height:1;font-size:rem(13.33);}
+.useguide_text_sub{color: #000000;opacity: 0.5;line-height:1.3;font-size:rem(11.33);margin-top:rem(7);font-weight:300;}
 
 .app_guide_group{}
 .app_banner_wrap{}
 .app_banner{
-    > img{}
+    display:block;line-height:0;background-color:rgba(0,0,0,.5);text-align:center;margin-bottom:rem(13.33);padding:rem(20);
+    > img{vertical-align: top;max-width:rem(137.33);}
+    &:last-of-type{margin-bottom:0;}
 }
-.app_banner_copy{}
+.app_banner_copy{display:block;color:#000;font-size:rem(12);text-align: center;margin-top:rem(20);}
 
 
 .skin_list_wrap{
