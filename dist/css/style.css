@@ -1111,6 +1111,24 @@ html,
   background: #fff;
 }
 
+.header_util_wrap {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  padding-right: 1.25rem;
+}
+
+.ico_util_list {
+  display: flex;
+  align-items: center;
+}
+.ico_util_list > li {
+  margin-right: 0.833125rem;
+}
+.ico_util_list > li:last-of-type {
+  margin-right: 0;
+}
+
 /*! jQuery UI - v1.11.4 - 2017-08-09
 * http://jqueryui.com
 * Includes: core.css, datepicker.css, theme.css
@@ -2929,6 +2947,9 @@ li.nodata_li {
 .ico_menu.ico_sale {
   background-image: url("../images/ico_sale.png");
 }
+.ico_menu.ico_skin_use {
+  background-image: url("../images/ico_skin_use.png");
+}
 
 .ico_snsitem_vlist {
   text-align: center;
@@ -2985,6 +3006,9 @@ input.form_input {
 }
 input.form_input.align2 {
   text-align: center;
+}
+input.form_input.align3 {
+  text-align: right;
 }
 
 input.form_input::-webkit-input-placeholder {
@@ -4143,6 +4167,32 @@ input.boxprops:checked + .boxprops_label:before {
   margin-top: 1.25rem;
 }
 
+.view_item_title {
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.view_item_content {
+  background: #F7F7F7;
+  margin: 0.833125rem -1.25rem 0;
+  padding: 0.833125rem;
+}
+.view_item_content .skin_item {
+  max-width: 41.944vw;
+  margin: 0 auto;
+}
+
+.view_else_wrap {
+  padding: 1.66625rem 0 0 0;
+}
+.view_else_wrap .item_data_form_row {
+  margin: 0;
+}
+.view_else_wrap .vertical_form_group {
+  margin-top: 1.04125rem;
+}
+
 .boxgrid_item_list_wrap {
   margin: 3.125rem auto 0;
   max-width: 20rem;
@@ -4407,5 +4457,56 @@ input.boxprops:checked + .boxprops_label:before {
 
 .mesage_sigpara strong {
   font-weight: 500;
+}
+
+.skin_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1.15625rem -0.5208333333rem;
+}
+.skin_list > li {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1.15625rem 0.5208333333rem;
+  flex: 0 0 50%;
+}
+.skin_list > li.nodata_li .nodata_para {
+  padding: 6.25rem 1.25rem;
+}
+
+.skin_item {
+  display: block;
+  position: relative;
+  border: 1px solid #CCCCCC;
+  border-radius: 0.2083125rem;
+  height: 60vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+.skin_item:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.skin_layer {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.skin_label {
+  font-weight: 300;
+  line-height: 1;
+  font-size: 0.833125rem;
+  display: inline-block;
+  border-radius: 0 0.2083125rem 0 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  min-width: 3.54125rem;
+  box-sizing: border-box;
+  padding: 0.3125rem;
 }
 /*# sourceMappingURL=style.css.map */

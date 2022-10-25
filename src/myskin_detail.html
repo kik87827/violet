@@ -2,10 +2,16 @@
 <html lang="ko">
 @@include('./include/head.html')
 <body class="front_body">
-	<div class="page_wrap">
+	<div class="page_wrap layout_type2">
 		<header class="header_wrap">
 			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
-			
+			<div class="header_util_wrap">
+				<ul class="ico_util_list">
+					<li><a href="#" class="ico_menu ico_skin_use"><span class="hdtext">사용하기</span></a></li>
+					<li><a href="#" class="ico_menu ico_boast"><span class="hdtext">자랑하기</span></a></li>
+					<li><a href="#" class="ico_menu ico_sale"><span class="hdtext">판매하기</span></a></li>
+				</ul>
+			</div>
 		</header>
 		<section class="mid_section">
 			내용이 들어갑니다.<br>
@@ -127,6 +133,12 @@
 						selector: "#boast_popup"
 					});
 				}
+			});
+			document.querySelector(".ico_boast").addEventListener("click",(e)=>{
+				e.preventDefault();
+				let agree_popup = new DesignPopup({
+					selector: "#boast_popup"
+				});
 			});
 		</script>
 	</div>

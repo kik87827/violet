@@ -147,6 +147,7 @@ li{
     &.ico_del{background-image:url("../images/ico_del.png");}
     &.ico_boast{background-image:url("../images/ico_boast.png");}
     &.ico_sale{background-image:url("../images/ico_sale.png");}
+    &.ico_skin_use{background-image:url("../images/ico_skin_use.png");}
 }
 
 .ico_snsitem_vlist{
@@ -167,6 +168,7 @@ li{
 
 input.form_input{border:0;border-bottom:1px solid #ddd;height:rem(45);padding:0 rem(12.66);line-height:1;width:100%;box-sizing: border-box;font-size:rem(13.33333333333333);color:#000;
     &.align2{text-align: center;}
+    &.align3{text-align: right;}
 }
 
 input.form_input::-webkit-input-placeholder{color:#000;opacity: 0.5;}
@@ -577,29 +579,17 @@ input.boxprops:checked + .boxprops_label{
 .app_banner_copy{display:block;color:#000;font-size:rem(12);text-align: center;margin-top:rem(20);}
 
 
-.skin_list_wrap{
-
-}
-
-.skin_list{
-    > li{
-        &.nodata_li{
-            .nodata_para{}  
-        }
-    }
-}
-.skin_item{}
-.skin_layer{}
-.skin_label{}
 
 .view_item_wrap{}
-.view_item_title{}
+.view_item_title{font-weight: 300;font-size:rem(20);line-height:1;}
 .view_item_content{
-    .skin_item{}
+    background: #F7F7F7;margin:rem(13.33) rem(-20) 0;padding:rem(13.33);
+    .skin_item{max-width:41.944vw;margin:0 auto;}
 }
 .view_else_wrap{
-    .item_data_form_row{}
-    .vertical_form_group{}
+    padding:rem(26.66) 0 0 0;
+    .item_data_form_row{margin:0}
+    .vertical_form_group{margin-top:rem(16.66)}
 }
 
 .boxgrid_item_list_wrap{
@@ -726,3 +716,23 @@ input.boxprops:checked + .boxprops_label{
 .mesage_sigpara{
     strong{font-weight: 500;}
 }
+
+.skin_list_wrap{}
+.skin_list{
+    display:flex;flex-wrap:wrap;margin:rem(-18.5) rem(-8.333333333333333);
+    > li{
+        width:50%;box-sizing:border-box;padding:rem(18.5) rem(8.333333333333333);flex:0 0 50%;
+        &.nodata_li{
+            .nodata_para{
+                padding:rem(100) rem(20);
+            }
+        }
+    }
+}
+.skin_item{
+    display:block;position:relative;
+    border: 1px solid #CCCCCC;border-radius: rem(3.333);height:60.000vw;background-repeat:no-repeat;background-size:cover;background-position:0 0;
+    &:hover{box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);}
+}
+.skin_layer{position:absolute;top:-1px;right:-1px;font-size:0;line-height:0;}
+.skin_label{font-weight:300;line-height:1;font-size:rem(13.33);display:inline-block;border-radius: 0 rem(3.333) 0 0;background:rgba(0,0,0,.5);text-align: center;color:#fff;min-width:rem(56.66);box-sizing: border-box;padding:rem(5)}
