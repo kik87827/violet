@@ -143,11 +143,15 @@ li{
 .ico_menu{
     display:block;width:rem(26.66666666666667);height:rem(26.66666666666667);
     background-repeat:no-repeat;background-size:100% auto;background-position:50% 50%;
-    &.ico_modify{background-image:url("../images/ico_modify.png");}
+    &.ico_modify{background-image:url("../images/ico_modify.png");width:rem(30)}
     &.ico_del{background-image:url("../images/ico_del.png");}
     &.ico_boast{background-image:url("../images/ico_boast.png");}
     &.ico_sale{background-image:url("../images/ico_sale.png");}
+    &.ico_sale2{background-image:url("../images/ico_sale2.png");}
     &.ico_skin_use{background-image:url("../images/ico_skin_use.png");}
+    &.ico_guarantee{background-image:url("../images/ico_guarantee.png");}
+    &.ico_like_vio{background-image:url("../images/ico_like_vio.png");}
+    &.ico_reply{background-image:url("../images/ico_reply.png");}
 }
 
 .ico_snsitem_vlist{
@@ -736,3 +740,203 @@ input.boxprops:checked + .boxprops_label{
 }
 .skin_layer{position:absolute;top:-1px;right:-1px;font-size:0;line-height:0;}
 .skin_label{font-weight:300;line-height:1;font-size:rem(13.33);display:inline-block;border-radius: 0 rem(3.333) 0 0;background:rgba(0,0,0,.5);text-align: center;color:#fff;min-width:rem(56.66);box-sizing: border-box;padding:rem(5)}
+
+
+.flow_menu_list_wrap{}
+.flow_menu_list{
+    > li{
+        &.active{
+            .flow_menu{}
+        }
+    }
+}
+.flow_menu{}
+.list_viewer_wrap{}
+
+.btn_list_viewer{
+    &.active{}
+    &.view_big{}
+    &.view_small{}
+}
+.gallery_list_wrap{}
+.gallery_list{}
+.gallery_item{}
+.gallery_thum{
+    > img{}
+}
+.gallery_spec_group{
+     > *{}
+}
+.gallery_spec_label_row{}
+.gallery_spec_label{}
+.gallery_spec_title_row{}
+.gallery_spec_title{}
+.gallery_spec_date_row{}
+.gallery_spec_date{}
+.gallery_spec_else_row{}
+.icon_menu_list{
+    > li{
+        &:last-of-type{}
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+
+.emp_box_item{
+    &.top_pos{}
+    &.message_item{}
+}
+.emp_box_cell{
+    &.define_ico{
+        .ico_menu{}
+    }
+    &.define_main{}
+    &.define_else{
+        .btn_textonly{}
+    }
+    &.define_ico{}
+}
+.emp_box_sig{}
+.emp_box_sub{}
+.btn_textonly{
+    &.color_cloud{}
+    &.btn_more{}
+    &.has_allow{
+        &:after{}
+    }
+}
+
+.detail_pro_item{}
+.pro_spec_label_row{}
+.pro_spec_label{}
+.pro_spec_title_row{}
+.pro_spec_title{}
+
+.detail_data_item{}
+.detail_data_title_row{}
+.detail_data_kind{}
+.detail_data_title{}
+.detail_data_content_row{}
+.message_data{}
+.data_control_group{}
+
+.detail_data_else_row{}
+.data_cell_row{
+    > .ico_menu{
+        &:last-of-type{}
+    }
+    &.type2{
+        .ico_menu{}
+    }
+}
+
+.btn_ico_count{
+    .ico_menu{}
+}
+.ico_count{}
+
+.key_column_item_group{
+
+}
+.key_column_title_row{}
+.key_column_title{}
+.key_column_content_row{
+    &.detail_img_regular{
+        > img{}
+
+        .nodata_para_group{
+            .nodata_para{}
+        }
+    }
+    &.message_box{}
+    &.chart_box{}
+}
+.detail_img_layer{}
+.text_ing_box{}
+
+.key_column_title_else{
+    .split_text_group{}
+}
+.split_text_group{}
+.split_value{}
+.split_unit{}
+
+.message_para{
+    > strong{}
+}
+
+.onlytext_item_list{
+    > li{
+        &:last-of-type{}
+        &.active{
+            .onlytext_item{}
+        }
+    }
+}
+.onlytext_item{}
+
+.form_field_wrap{}
+.form_title_row{}
+.form_title{}
+.form_content_row{}
+.form_vitem{
+    &:last-of-type{}
+}
+
+select.form_select{}
+input.form_input{}
+textarea.form_ta{}
+
+.btn_ico_more{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+}
+
+.nodata_para_group{
+    .nodata_para{}
+}
+
+.mid_notice_box{
+}
+.ico_count_group{
+    .ico_item{}
+}
+.ico_count_text{}
+
+.list_linkage_form_group{}
+.searchfield_group{
+    &.list_topsearch{}
+    input.search_input{}
+    .btn_search_submit{}
+}
+input.search_input{}
+.btn_search_submit{}
+
+.vertical_list_group{}
+.vertical_list{
+    > li{
+        &.nodata_li{
+            .nodata_para{}
+        }
+        &:last-of-type{}
+    }
+}
+.list_hor_item{
+}
+.list_hor_main{
+    &.thum_spec_wrap{}
+}
+.list_hor_thum{
+    &.no_img{}
+}
+.list_hor_spec_g{}
+.list_spec_main{}
+.list_spec_sub{}
+.list_hor_sub{
+    .btn_empbox{}
+}
+.btn_empbox{}
+.empbox_in{}
