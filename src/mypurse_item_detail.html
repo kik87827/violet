@@ -7,15 +7,17 @@
 			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
 			<h1 class="header_title"><span class="header_title_text">아이템 상세보기</span></h1>
 		</header>
-		<section class="mid_section type4">
+		<section class="mid_section">
 			<div class="emp_box_item top_pos">
-				<div class="emp_box_cell define_ico"><span class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></span></div>
-				<div class="emp_box_cell define_main">
-					<span class="emp_box_sig">디지털 보증서</span>
-					<span class="emp_box_sub">2022.09.20</span>
-				</div>
-				<div class="emp_box_cell define_else">
-					<a href="javascript:;" class="btn_textonly">인증</a>
+				<div class="emp_box_fxwrap">
+					<div class="emp_box_cell define_ico"><span class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></span></div>
+					<div class="emp_box_cell define_main">
+						<span class="emp_box_sig">디지털 보증서</span>
+						<span class="emp_box_sub">2022.09.20</span>
+					</div>
+					<div class="emp_box_cell define_else">
+						<a href="javascript:;" class="btn_textonly">인증</a>
+					</div>
 				</div>
 			</div>
 			<div class="detail_pro_item">
@@ -58,11 +60,13 @@
 				</div>
 			</div>
 			<div class="emp_box_item message_item">
-				<div class="emp_box_cell define_message">
-					<p class="alarm_para">26개 거래요청 알림이 도착하였습니다</p>
-				</div>
-				<div class="emp_box_cell define_else">
-					<a href="javascript:;" class="btn_textonly has_allow">판매중</a>
+				<div class="emp_box_fxwrap">
+					<div class="emp_box_cell define_message">
+						<p class="alarm_para">26개 거래요청 알림이 도착하였습니다</p>
+					</div>
+					<div class="emp_box_cell define_else">
+						<a href="javascript:;" class="btn_textonly has_allow">판매중</a>
+					</div>
 				</div>
 			</div>
 			<div class="key_column_item_group">
@@ -101,12 +105,21 @@
 				</div>
 				<div class="key_column_content_row chart_box">
 					<!-- chart -->
-					<div style="display:flex;align-items:center;justify-content:center;background: rgba(255, 0, 0, 0.4);text-align:center;color:#fff;font-size:13px;">
+					<div style="display:flex;align-items:center;height:160px;justify-content:center;background: rgba(255, 0, 0, 0.4);text-align:center;color:#fff;font-size:13px;">
+						chart
 					</div>
 					<!-- // chart -->
 				</div>
 			</div>
 		</section>
+		<script>
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			if(url_2 === "sale"){
+				document.querySelector(".message_item").classList.add("active");
+			}
+		</script>
 	</div>
 </body>
 </html>

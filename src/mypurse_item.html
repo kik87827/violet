@@ -7,7 +7,7 @@
 			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
 			<h1 class="header_title"><span class="header_title_text">아이템</span></h1>
 		</header>
-		<section class="mid_section type3">
+		<section class="mid_section type5">
 			<div class="flow_menu_list_wrap">
 				<ul class="flow_menu_list">   
 					<li class="active"><a href="javascript:;" class="flow_menu">전체</a></li>
@@ -31,6 +31,12 @@
 							<div class="gallery_spec_group">
 								<div class="pro_spec_label_row">
 									<span class="pro_spec_label">LOUIS VUITTON</span>
+									<div class="pro_spec_ico_group">
+										<ul class="icon_menu_list">
+											<li><a href="javascript:;" class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></a></li>
+											<li><a href="javascript:;" class="ico_menu ico_boast"><span class="hdtext">자랑하기</span></a></li>
+										</ul>
+									</div>
 								</div>
 								<div class="pro_spec_title_row">
 									<span class="pro_spec_title">디오니서스 스몰 GG 핸드백</span>
@@ -53,6 +59,12 @@
 							<div class="gallery_spec_group">
 								<div class="pro_spec_label_row">
 									<span class="pro_spec_label">LOUIS VUITTON</span>
+									<div class="pro_spec_ico_group">
+										<ul class="icon_menu_list">
+											<li><a href="javascript:;" class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></a></li>
+											<li><a href="javascript:;" class="ico_menu ico_boast"><span class="hdtext">자랑하기</span></a></li>
+										</ul>
+									</div>
 								</div>
 								<div class="pro_spec_title_row">
 									<span class="pro_spec_title">다이아몬드 바인 서클 펜던트</span>
@@ -75,6 +87,12 @@
 							<div class="gallery_spec_group">
 								<div class="pro_spec_label_row">
 									<span class="pro_spec_label">LOUIS VUITTON</span>
+									<div class="pro_spec_ico_group">
+										<ul class="icon_menu_list">
+											<li><a href="javascript:;" class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></a></li>
+											<li><a href="javascript:;" class="ico_menu ico_boast"><span class="hdtext">자랑하기</span></a></li>
+										</ul>
+									</div>
 								</div>
 								<div class="pro_spec_title_row">
 									<span class="pro_spec_title">디오니서스 스몰 GG 핸드백</span>
@@ -97,6 +115,12 @@
 							<div class="gallery_spec_group">
 								<div class="pro_spec_label_row">
 									<span class="pro_spec_label">LOUIS VUITTON</span>
+									<div class="pro_spec_ico_group">
+										<ul class="icon_menu_list">
+											<li><a href="javascript:;" class="ico_menu ico_guarantee"><span class="hdtext">디지털 보증서</span></a></li>
+											<li><a href="javascript:;" class="ico_menu ico_boast"><span class="hdtext">자랑하기</span></a></li>
+										</ul>
+									</div>
 								</div>
 								<div class="pro_spec_title_row">
 									<span class="pro_spec_title">디오니서스 스몰 GG 핸드백</span>
@@ -117,6 +141,36 @@
 				</ul>
 			</div>
 		</section>
+		<script>
+			const gallery_list_wrap = document.querySelector(".gallery_list_wrap");
+			document.querySelectorAll(".btn_list_viewer").forEach((element)=>{
+				element.addEventListener("click",(e)=>{
+					e.preventDefault();
+					let thisEventObj = e.currentTarget;
+					let thisEventObjParent = thisEventObj.closest(".list_viewer_wrap");
+					let thisEventObjSibings = thisEventObjParent.querySelectorAll(".btn_list_viewer");
+					thisEventObjSibings.forEach((element)=>{
+						element.classList.remove("active");
+					});
+					thisEventObj.classList.add("active");
+
+					gallery_list_wrap.classList.remove("type2");
+					if(!thisEventObj.classList.contains("view_big")){
+						gallery_list_wrap.classList.add("type2");
+					}
+				});
+			});
+
+
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			if(url_2 === "small"){
+				document.querySelector(".btn_list_viewer.view_big").classList.remove("active");
+				document.querySelector(".btn_list_viewer.view_small").classList.add("active");
+				gallery_list_wrap.classList.add("type2");
+			}
+		</script>
 	</div>
 </body>
 </html>
