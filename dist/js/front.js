@@ -351,15 +351,15 @@ DesignPopup.prototype.bindEvent = function() {
 
 
 function commonForm() {
-  // addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
-  //   let thisTarget = e.target;
-  //   if (thisTarget.value === "0") {
-  //     thisTarget.classList.add("ready");
-  //   } else {
-  //     console.log(thisTarget.value);
-  //     thisTarget.classList.remove("ready");
-  //   }
-  // });
+  addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+    let thisTarget = e.target;
+    if (thisTarget.value === "0") {
+      thisTarget.classList.add("ready");
+    } else {
+      console.log(thisTarget.value);
+      thisTarget.classList.remove("ready");
+    }
+  });
   let form_input = document.querySelectorAll(".form_input");
   if (form_input.length) {
     form_input.forEach(function(elem, index) {

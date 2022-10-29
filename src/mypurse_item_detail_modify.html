@@ -12,10 +12,10 @@
 				<div class="form_title_row"><p class="form_title">카테고리</p></div>
 				<div class="form_content_row">
 					<div class="form_vitem type2">
-						<select class="form_select"><option value="0">카테고리 선택</option><option value="1">옵션1</option><option value="2">옵션2</option></select>
+						<select class="form_select ready"><option value="0">카테고리 선택</option><option value="1">옵션1</option><option value="2">옵션2</option></select>
 					</div>
 					<div class="form_vitem">
-						<input type="text" class="form_input" placeholder="제목 입력" />
+						<input type="text" class="form_input type2" placeholder="제목 입력" />
 					</div>
 					<div class="form_vitem">
 						<textarea rows="10" cols="10" class="form_ta" placeholder="메시지 입력"></textarea>
@@ -29,9 +29,11 @@
 						<a href="javascript:;" class="btn_ico_more"><span class="hdtext">더보기</span></a>
 					</div>
 				</div>
-				<div class="key_column_content_row detail_img_regular">
+				<div class="key_column_content_row detail_img_regular" name="normal">
 					<img src="./images/temp_regular.png" alt="">
 					<div class="detail_img_layer"><span class="text_ing_box">대표</span></div>
+				</div>
+				<div class="key_column_content_row detail_img_regular nodata_case" style="display:none" id="nodata_case">
 					<div class="nodata_para_group">
 						<p class="nodata_para">등록된 사진/영상이 없습니다.</p>
 					</div>
@@ -41,6 +43,15 @@
 		<section class="btn_section">
 			<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">저장하기</span></a>
 		</section>
+		<script>
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			if(url_2 === "no_photo"){
+				document.querySelector("#nodata_case").style.display="block";
+				document.querySelector("[name='normal']").style.display="none";
+			}
+		</script>
 	</div>
 </body>
 </html>

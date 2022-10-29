@@ -44,7 +44,7 @@ html,
     > img{vertical-align: top;width:rem(70)}
 }
 .mid_section{z-index:5;position:relative;padding:rem(33.33333333333333) rem(20) rem(60);
-    &.type2{padding:0}
+    &.type2{padding:0 0 rem(60) 0}
     &.type3{padding:rem(20) rem(20) rem(60)}
     &.type4{padding:rem(50) rem(20) rem(60)}
     &.type5{padding-top:0;}
