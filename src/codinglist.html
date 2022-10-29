@@ -10,6 +10,7 @@
 <title></title>
 <style type="text/css">
 *{margin:0;padding:0;font-size:14px;}
+html{height:auto;}
 ul{list-style: none;margin:0;padding:0;}
 table {border-collapse:collapse; border-spacing:0;}
 table th, strong {font-weight:normal;}
@@ -127,13 +128,13 @@ a:hover {text-decoration:underline;}
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td class="no"></td>
 					<td class="link"><a href="component.html" target="_blank">콤포넌트</a></td>
 					<td class="td_url"></td>
 					<td class="work ing"></td>
 					<td class="bgo"></td>
-				</tr>
+				</tr> -->
 				
 				<tr class="depth">
 					<td colspan="5">앱이용권한 안내</td>
@@ -420,21 +421,21 @@ a:hover {text-decoration:underline;}
 					<td class="no"></td>
 					<td class="link"><a href="mypurse_digital.html" target="_blank">디지털 보증서</a></td>
 					<td class="td_url"></td>
-					<td class="work ing"></td>
+					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
 				<tr>
 					<td class="no"></td>
 					<td class="link"><a href="mypurse_digital.html?qr" target="_blank">디지털 보증서 qr</a></td>
 					<td class="td_url"></td>
-					<td class="work ing"></td>
+					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
 				<tr>
 					<td class="no"></td>
 					<td class="link"><a href="mypurse_digital.html?history" target="_blank">디지털 보증서 이력</a></td>
 					<td class="td_url"></td>
-					<td class="work ing"></td>
+					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
 				<tr class="depth">
@@ -612,7 +613,7 @@ $(function () {
 });
 
 function chkList(){
-	var tatal_n = $(".codinglist tr").length - $(".depth").length-1;
+	var tatal_n = $(".codinglist tr").length - $(".depth,.depth2").length-1;
 	var curr_n = 0;
 	var else_n = 0;
 	var $ctd = $(".codinglist td.work"),
@@ -652,7 +653,7 @@ function chkList(){
 		}
 	});
 	$(".codinglist tr").each(function() {
-		var index = $(".codinglist tr").not('.depth').index(this);
+		var index = $(".codinglist tr").not('.depth,.depth2').index(this);
 		$(this).children(".codinglist td.no").text(index);
 	});
 	$("td.link > a").each(function(){

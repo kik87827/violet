@@ -7,7 +7,7 @@
 			<h1 class="header_title"><span class="header_title_text">디지털 보증서</span></h1>
 			<a href="javascript:;" class="btn_closeitem"><span class="hdtext">닫기</span></a>
 		</header>
-		<section class="mid_section type4">
+		<section class="mid_section">
 			<div class="tail_data_box_group">
 				<div class="tail_data_box" id="digital_docu">
 					<div class="inline_obj_both">
@@ -26,9 +26,9 @@
 							</div>
 						</div>
 						<div class="inline_obj">
-							<div class="qr_item">
+							<a href="javascript:;" class="qr_item" id="btn_qrshow">
 								<img src="images/img_digital_qr.png" class="qr_img" alt="">
-							</div>
+							</a>
 						</div>
 					</div>
 					<div class="define_obj_list">
@@ -40,7 +40,7 @@
 							<p class="define_obj_dt">소유 변경 내역</p>
 							<p class="define_obj_dd">
 								<span class="obj_intext">3회</span>
-								<a href="#" class="btn_textOnly line_type">이력보기</a>
+								<a href="#" class="btn_textonly line_type small" name="btn_show_history">이력보기</a>
 							</p>
 						</div>
 					</div>
@@ -65,7 +65,7 @@
 								<li>
 									<div class="list_hor_item">
 										<div class="list_hor_main thum_spec_wrap">
-											<div class="list_hor_thum" style="background-image:url(./images/logo_gucci.png)"></div>
+											<div class="list_hor_thum has_line" style="background-image:url(./images/logo_gucci.png)"></div>
 											<div class="list_hor_spec_g">
 												<p class="list_spec_main">GUCCI</p>
 												<p class="list_spec_sub">35,000,000 krw</p>
@@ -79,7 +79,7 @@
 								<li>
 									<div class="list_hor_item">
 										<div class="list_hor_main thum_spec_wrap">
-											<div class="list_hor_thum no_img"></div>
+											<div class="list_hor_thum no_img has_line"></div>
 											<div class="list_hor_spec_g">
 												<p class="list_spec_main">ameoi</p>
 												<p class="list_spec_sub">35,000,000 krw</p>
@@ -92,13 +92,13 @@
 								</li>
 							</ul>
 						</div>
-						<div class="btn_toggle_more_row">
-							<a href="javascript:;" class="btn_toggle_more"><span class="hdtext">더보기</span></a>
-						</div>
+					</div>
+					<div class="btn_toggle_more_row">
+						<a href="javascript:;" class="btn_toggle_more"><span class="hdtext">더보기</span></a>
 					</div>
 					<!-- // 변경 이력 -->
 				</div>
-				<div class="tail_data_box" id="digital_qr">
+				<div class="tail_data_box" id="digital_qr" style="display:none">
 					<div class="tail_qr_wrap">
 						<div class="tail_qr_item">
 							<img src="./images/tail_qr_item.png" class="tail_qr" alt="">
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 			<div class="tail_product_row">
-				<div class="detail_img_regular">
+				<div class="key_column_content_row detail_img_regular">
 					<img src="./images/temp_regular.png" alt="">
 				</div>
 				<div class="tail_product_main">
@@ -127,6 +127,48 @@
 				</div>
 			</div>
 		</section>
+		<script>
+			let toggleIs = false;
+			document.querySelector("[name='btn_show_history']").addEventListener("click",(e)=>{
+				e.preventDefault();
+				let thisEventObj = e.currentTarget;
+				if(toggleIs){
+					thisEventObj.innerHTML = `이력보기`;
+				}else{
+					thisEventObj.innerHTML = `이력닫기`;
+				}
+				document.querySelector("#modify_history").classList.toggle("active");
+				document.querySelector(".btn_toggle_more_row").classList.toggle("active");
+				toggleIs = !toggleIs;
+			});
+
+			document.querySelector("#btn_qrshow").addEventListener("click",(e)=>{
+				e.preventDefault();
+
+				document.querySelector("#digital_docu").style.display = "none";
+				document.querySelector("#digital_qr").style.display = "block";
+			});
+			document.querySelector("#digital_qr .btn_tail_data_close").addEventListener("click",(e)=>{
+				e.preventDefault();
+
+				document.querySelector("#digital_docu").style.display = "block";
+				document.querySelector("#digital_qr").style.display = "none";
+			});
+
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+			if(url_2 === "qr"){
+				document.querySelector("#digital_docu").style.display = "none";
+				document.querySelector("#digital_qr").style.display = "block";
+			}else if(url_2 === "history"){
+				document.querySelector("[name='btn_show_history']").innerHTML = `이력닫기`;
+				document.querySelector("#modify_history").classList.add("active");
+				document.querySelector(".btn_toggle_more_row").classList.add("active");
+				toggleIs = true;
+			}
+		</script>
 	</div>
 </body>
 </html>
