@@ -1210,3 +1210,40 @@ textarea.textform_ta{}
 }
 .btn_tail_data_close:before{transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);}
 .btn_tail_data_close:after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
+
+
+/* skin */
+.front_body.render_skin_body{}
+.page_wrap.render_skin_wrap{}
+.mid_section.has_render{}
+.render_skin_zone{
+}
+
+.bg_render_group{}
+.bg_render_short{
+    > img{}
+}
+.bg_render_long{
+    > img{}
+}
+.skin_card_render{
+    > img{}
+}   
+
+.cover_render_group{}
+
+.cover_logo_wrap{
+    > img{}
+}
+
+.cover_pocket_wrap{}
+
+.cover_pocket{
+    &:after{}
+}
+.cover_qr_item{
+    svg{
+        path{}
+        rect{}
+    }
+}

@@ -2439,7 +2439,7 @@ html,
     left: 20px !important;
   }
 }
-/* contents */
+/* menu */ /* contents */
 /* 공통 alert confirm */
 .btn_guide {
   display: inline-block;
@@ -5635,4 +5635,6 @@ input.search_input {
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
+
+/* skin */
 /*# sourceMappingURL=style.css.map */

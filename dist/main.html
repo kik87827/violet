@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body render_skin_body">
+	<div class="page_wrap render_skin_wrap">
+		<div class="render_skin_zone">
+			<div class="bg_render_group">
+				<div class="bg_render_short"><img src="./images/skin_out01.png" alt=""></div>
+				<div class="bg_render_long"><img src="./images/skin_out02.png" alt=""></div>
+			</div>
+			<div class="skin_card_render"><img src="./images/skin_card_render.png" alt=""></div>
+			<div class="cover_render_group">
+				<div class="cover_logo_wrap"><img src="./images/logo_skin.png" alt=""></div>
+				<div class="cover_pocket_wrap">
+					<div class="cover_pocket"></div>
+					<div class="cover_qr_item">
+						<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.81138 28.0612H0V0H28.0612V6.81138H6.81138V28.0612Z" fill="white" />
+							<path d="M61.9388 6.81137L61.9388 -1.27566e-06L90 0L90 28.0612L83.1886 28.0612L83.1886 6.81138L61.9388 6.81137Z" fill="white" />
+							<path d="M83.1886 61.9388L90 61.9388L90 90L61.9388 90L61.9388 83.1886L83.1886 83.1886L83.1886 61.9388Z" fill="white" />
+							<path d="M28.0612 83.1886L28.0612 90L0 90L3.67979e-06 61.9388L6.81138 61.9388L6.81138 83.1886L28.0612 83.1886Z" fill="white" />
+							<path d="M74.2476 40.2769H49.8164V15.8457H74.2476V40.2769ZM55.5016 34.5917H68.5624V21.5309H55.5016V34.5917Z" fill="white" />
+							<path d="M40.4625 74.0621H16.0312V49.6309H40.4625V74.0621ZM21.7165 68.3769H34.7773V55.3161H21.7165V68.3769Z" fill="white" />
+							<path d="M66.6719 57.5H57.3906V66.5637H66.6719V57.5Z" fill="white" />
+							<rect x="15.7656" y="15.7656" width="24.7756" height="24.7756" fill="white" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="floating_menu_zone">
+			<a href="#" class="btn_setting_util">
+				<span class="hdtext">setting</span>
+				<svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M77 45.0714V33.9286L67.0108 30.8834C66.4955 29.2378 65.8188 27.6613 65.0345 26.1541L69.956 16.9185L62.0815 9.04399L52.8459 13.9655C51.3387 13.1735 49.7622 12.5045 48.1166 11.9892L45.0714 2H33.9286L30.8834 11.9892C29.2378 12.5045 27.6613 13.1812 26.1541 13.9655L16.9185 9.04399L9.04399 16.9185L13.9655 26.1541C13.1735 27.6613 12.5045 29.2378 11.9892 30.8834L2 33.9286V45.0637L11.9892 48.1089C12.5045 49.7545 13.1812 51.331 13.9655 52.8382L9.04399 62.0738L16.9185 69.956L26.1541 65.0345C27.6613 65.8265 29.2378 66.4955 30.8834 67.0108L33.9286 77H45.0637L48.1089 67.0108C49.7545 66.4955 51.331 65.8188 52.8382 65.0345L62.0738 69.956L69.9483 62.0815L65.0268 52.8459C65.8188 51.3387 66.4879 49.7622 67.0031 48.1166L77 45.0714Z" stroke="#999999" stroke-width="3.5" stroke-miterlimit="10" stroke-linejoin="round" />
+					<path d="M39.4964 49.2781C44.8987 49.2781 49.2781 44.8987 49.2781 39.4964C49.2781 34.0942 44.8987 29.7148 39.4964 29.7148C34.0942 29.7148 29.7148 34.0942 29.7148 39.4964C29.7148 44.8987 34.0942 49.2781 39.4964 49.2781Z" fill="#999999" />
+				</svg>
+			</a>
+			<a href="#" class="btn_gnb_call">
+				<span class="hdtext">gnb open</span>
+			</a>
+			<a href="#" class="btn_gnb_close">
+				<span class="hdtext">gnb close</span>
+			</a>
+			<div class="gnb_list_wrap">
+				<ul class="gnb_list">
+					<li><a href="javascript::" class="gnb_item ico_my"><span class="gnb_item_text">내 지갑</span></a></li>
+					<li><a href="javascript::" class="gnb_item ico_skin"><span class="gnb_item_text">스킨</span></a></li>
+					<li><a href="javascript::" class="gnb_item ico_cate"><span class="gnb_item_text">카테고리</span></a></li>
+					<li><a href="javascript::" class="gnb_item ico_flea"><span class="gnb_item_text">플리마켓</span></a></li>
+					<li><a href="javascript::" class="gnb_item ico_story"><span class="gnb_item_text">스토리</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
