@@ -443,3 +443,19 @@ function bottomLayer() {
     }
   }
 }
+
+
+function floatingMenu() {
+  document.querySelector(".btn_gnb_call").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.currentTarget.classList.add("hidden");
+    document.querySelector(".gnb_list_wrap").classList.add("active");
+    document.querySelector(".btn_gnb_close").classList.add("active");
+  }, false);
+  document.querySelector(".btn_gnb_close").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.currentTarget.classList.remove("active");
+    document.querySelector(".gnb_list_wrap").classList.remove("active");
+    document.querySelector(".btn_gnb_call").classList.remove("hidden");
+  }, false);
+}
