@@ -87,7 +87,7 @@
 				let url = window.location.href.split('?')[1];
 				let url_2 = url !== undefined ? url.split('#')[0] : null;
 				if (url_2 === "serial") {
-					let agree_popup = new DesignPopup({
+					let serial_popup = new DesignPopup({
 						selector: "#serial_popup"
 					});
 				} else if (url_2 === "result") {
