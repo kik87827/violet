@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   commonEvent();
   commonForm();
   bottomLayer();
+  dataClampMore();
 });
 window.addEventListener("load", function() {});
 
@@ -209,7 +210,6 @@ DesignModal.prototype.initShow = function(option) {
     this.design_modal_text = document.querySelector(".design_modal_text");
     this.design_modal_text.innerHTML = option.message;
   }
-  if (option.type === "confirm") {}
   this.btn_main = this.modalparent.querySelector(".btn_main");
   this.pagewrap.style.zIndex = 0;
   this.domBody.setAttribute("data-scr", window.pageYOffset);
@@ -218,6 +218,10 @@ DesignModal.prototype.initShow = function(option) {
   this.design_modal_wrap = document.querySelector(".design_modal_wrap");
   this.closetrigger = document.querySelectorAll(".close_dmtrigger");
   this.design_modal_wrap.classList.add("active");
+
+  if (option.type === "alert") {
+    this.design_modal_wrap.classList.add("alert_type");
+  }
   setTimeout(function() {
     objThis.design_modal_wrap.classList.add("motion");
   }, 30);
@@ -356,7 +360,6 @@ function commonForm() {
     if (thisTarget.value === "0") {
       thisTarget.classList.add("ready");
     } else {
-      console.log(thisTarget.value);
       thisTarget.classList.remove("ready");
     }
   });
@@ -410,7 +413,6 @@ function scrollHasCont(target) {
     thisElementContent.style.marginRight = `-${getScrollBarWidth()}px`
     //thisElementContent.style.marginRight = `-10px`
     //thisElement.style.paddingRight = `${thisElement.getBoundingClientRect().width - thisElementContent.getBoundingClientRect().width}px`
-    console.log(thisElementContent);
   });
 }
 
@@ -515,7 +517,6 @@ function scrollTabFunc() {
     btn_click_is = false;
   });
   window.addEventListener("mousedown", () => {
-    console.log('mousedown');
     btn_click_is = false;
   });
 
@@ -541,4 +542,64 @@ function scrollTabFunc() {
     proitem_list_pos_array[0] = 0;
     return proitem_list_pos_array;
   }
+}
+
+function dataClampMore() {
+  let moreToggleBtn = document.querySelectorAll("[data-moreToggle]");
+  if (moreToggleBtn.length === 0) {
+    return;
+  }
+  moreToggleBtn.forEach((element) => {
+    let thisElement = element;
+    let toggleIs = false;
+    let thisElementText = thisElement.textContent;
+    element.addEventListener("click", (e) => {
+      let thisEventObj = e.currentTarget;
+      let thisElementToggle = thisEventObj.getAttribute("data-moreToggle");
+      let thisEventObjTarget = document.querySelector(thisEventObj.getAttribute("href"));
+      e.preventDefault();
+      console.log(thisEventObjTarget);
+      if (toggleIs) {
+        thisEventObj.textContent = thisElementText;
+        thisEventObjTarget.classList.remove("fullshow");
+      } else {
+        thisEventObj.textContent = thisElementToggle;
+        thisEventObjTarget.classList.add("fullshow");
+      }
+      toggleIs = !toggleIs;
+    })
+  });
+}
+
+function tabMenuActive(target) {
+  let targetDom = document.querySelectorAll(target);
+  targetDom.forEach((element) => {
+    let thisEach = element;
+    let thisEachMenu = thisEach.querySelectorAll("li > a");
+    let currentItem = thisEach.querySelector("li.active");
+    thisEachMenu.forEach((elementMenu) => {
+      elementMenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        let thisCurrentLi = e.currentTarget.closest("li");
+        if (currentItem !== null) {
+          currentItem.classList.remove("active");
+        }
+        thisCurrentLi.classList.add("active");
+        currentItem = thisCurrentLi;
+      });
+    });
+  });
+}
+
+function siblings(t) {
+  var children = t.parentElement.children;
+  var tempArr = [];
+
+  for (var i = 0; i < children.length; i++) {
+    tempArr.push(children[i]);
+  }
+
+  return tempArr.filter(function(e) {
+    return e != t;
+  });
 }

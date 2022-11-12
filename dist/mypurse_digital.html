@@ -182,6 +182,24 @@
 				document.querySelector(".btn_toggle_more_row").classList.add("active");
 				toggleIs = true;
 			}
+
+			document.querySelector(".btn_toggle_more").addEventListener("click", (e) => {
+				let designAlert = new DesignModal({
+					type: "alert",
+					message: `
+						<p class="modal_message_title">개발 작업</p>
+						<p class="modal_message_text">해당 더보기 작업은 개발에서 진행됩니다.</p>
+					`,
+					btnCloseText: "닫기",
+					btnMainText: "삭제",
+					closeCallback() {
+						console.log('closeCallback');
+					},
+					btnMainCallback() {
+						console.log('btnMainCallback');
+					}
+				});
+			});
 		</script>
 	</div>
 </body>

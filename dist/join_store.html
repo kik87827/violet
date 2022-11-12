@@ -247,25 +247,25 @@
 									<p class="result_data_label">검색결과 10건</p>
 									<div class="result_data_cont">
 										<div class="result_data_inwrap">
-											<a href="#" class="result_boxitem dtype2 active">
+											<a href="#" class="result_boxitem dtype2 active" name="result_box">
 												<div class="result_sig_cols">
 													<p class="result_sig_main">서울시 용산구 서빙고로 137</p>
 													<p class="result_sig_sub">04532</p>
 												</div>
 											</a>
-											<a href="#" class="result_boxitem dtype2">
+											<a href="#" class="result_boxitem dtype2" name="result_box">
 												<div class="result_sig_cols">
 													<p class="result_sig_main">서울 중구 소공로 103(소공동, 소공주차장)</p>
 													<p class="result_sig_sub">04532</p>
 												</div>
 											</a>
-											<a href="#" class="result_boxitem dtype2">
+											<a href="#" class="result_boxitem dtype2" name="result_box">
 												<div class="result_sig_cols">
 													<p class="result_sig_main">서울시 용산구 서빙고로 137</p>
 													<p class="result_sig_sub">04532</p>
 												</div>
 											</a>
-											<a href="#" class="result_boxitem dtype2">
+											<a href="#" class="result_boxitem dtype2" name="result_box">
 												<div class="result_sig_cols">
 													<p class="result_sig_main">서울 중구 소공로 103(소공동, 소공주차장)</p>
 													<p class="result_sig_sub">04532</p>
@@ -358,7 +358,18 @@
 				}
 				// designPopup.popupHide("#samplePopup"); 닫기
 
-
+				document.querySelectorAll("[name='result_box']").forEach((element) => {
+					let thisEachDom = element;
+					thisEachDom.addEventListener("click", (e) => {
+						e.preventDefault();
+						let thisEventObj = e.currentTarget;
+						let thisSiblings = siblings(thisEventObj);
+						thisSiblings.forEach((element) => {
+							element.classList.remove("active");
+						});
+						thisEventObj.classList.add("active");
+					});
+				})
 			});
 		</script>
 	</div>
