@@ -449,3 +449,84 @@ function floatingMenu(){
     document.querySelector(".btn_gnb_call").classList.remove("hidden");
   },false);
 }
+
+
+
+function scrollTabFunc(){
+const document_html = document.querySelector("html");
+const both_list_wrap = document.querySelector(".both_list_wrap");
+let both_list_wrap_pos = both_list_wrap.getBoundingClientRect().top;
+const btn_sortbox = document.querySelectorAll(".btn_sortbox");
+const proitem_list = document.querySelectorAll(".proitem_list");
+let pos_array = getPos();
+
+// init
+setTimeout(()=>{
+  window.scrollTo(0,0);
+  document_html.classList.add("smooth");
+},20);
+
+// event
+let current_active = document.querySelector(".btn_sortbox.active");
+var btn_click_is = false;
+let scroll_value = window.scrollY;
+btn_sortbox.forEach((element,index)=>{
+  element.addEventListener("mouseover",(e)=>{
+    btn_click_is = true;
+  });
+  element.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let thisEventObj = e.currentTarget;
+    pos_array = getPos();
+    activeTab(thisEventObj);
+    setTimeout(()=>{
+      goScroll(pos_array[index]);
+    },30);
+    btn_click_is = true;
+  });
+});
+
+window.addEventListener("scroll",()=>{
+  let scroll_value = window.scrollY;
+  pos_array = getPos();
+  if(btn_click_is){return;}
+  btn_sortbox.forEach((element,index)=>{
+    if(scroll_value>=pos_array[index]){
+      activeTab(element);
+    }
+  });
+});
+window.addEventListener("touchstart",()=>{
+  btn_click_is = false;
+});
+window.addEventListener("mousewheel",()=>{
+  btn_click_is = false;
+});
+window.addEventListener("mousedown",()=>{
+  console.log('mousedown');
+  btn_click_is = false;
+});
+
+function goScroll(pos){
+  window.scrollTo(0,pos);
+  // window.scrollTo({ top: pos, left: 0, behavior: 'smooth'});
+}
+
+function activeTab(target){
+  if(current_active !== null){
+    current_active.classList.remove("active");
+  }
+  target.classList.add("active");
+  current_active = target;
+}
+
+function getPos(){
+  let proitem_list_pos_array = [];
+  proitem_list.forEach((element)=>{
+    let loofPos = element.getBoundingClientRect().top + window.scrollY;
+    proitem_list_pos_array.push(loofPos);
+  });
+  proitem_list_pos_array[0] = 0;
+  return proitem_list_pos_array;
+}
+}
