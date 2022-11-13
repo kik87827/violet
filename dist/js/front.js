@@ -452,12 +452,18 @@ function floatingMenu() {
     e.preventDefault();
     e.currentTarget.classList.add("hidden");
     document.querySelector(".gnb_list_wrap").classList.add("active");
+    setTimeout(() => {
+      document.querySelector(".gnb_list_wrap").classList.add("motion");
+    }, 20);
     document.querySelector(".btn_gnb_close").classList.add("active");
   }, false);
   document.querySelector(".btn_gnb_close").addEventListener("click", (e) => {
     e.preventDefault();
     e.currentTarget.classList.remove("active");
-    document.querySelector(".gnb_list_wrap").classList.remove("active");
+    document.querySelector(".gnb_list_wrap").classList.remove("motion");
+    setTimeout(() => {
+      document.querySelector(".gnb_list_wrap").classList.remove("active");
+    }, 820);
     document.querySelector(".btn_gnb_call").classList.remove("hidden");
   }, false);
 }
@@ -602,4 +608,15 @@ function siblings(t) {
   return tempArr.filter(function(e) {
     return e != t;
   });
+}
+
+function mainSwiper() {
+  // swiper
+  var main_swiper = null;
+  const intro_swiper_slide = document.querySelectorAll(".card_group_swiper .swiper-slide");
+  if (intro_swiper_slide.length > 1) {
+    main_swiper = new Swiper(".card_group_swiper", {
+      speed: 800
+    });
+  }
 }
