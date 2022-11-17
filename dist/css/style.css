@@ -6239,4 +6239,10 @@ input.search_input {
     top: 56.13vw;
   }
 }
+@media (max-width: 359px) {
+  .card_item_group {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
