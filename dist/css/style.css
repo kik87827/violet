@@ -2620,7 +2620,7 @@ html,
   background-position: 0 16.6666666667%;
 }
 .gnb_item.ico_cate:before {
-  background-position: 0 33.3333333333;
+  background-position: 0 33.3333333333%;
 }
 .gnb_item.ico_flea:before {
   background-position: 0 50%;
@@ -3378,7 +3378,7 @@ input.props_form:checked {
 .btn_inlinebox_text {
   padding: 0 0.9375rem;
   display: inline-block;
-  font-weight: 350;
+  font-weight: 300;
   font-size: 0.75rem;
   line-height: 1;
 }
@@ -3930,14 +3930,14 @@ img.intro_logo {
   min-width: 0;
   border: 0;
 }
-.form_element_group > [class^=btn_] {
+.form_element_group > [class^=btn_]:not(.btn_inlinebox) {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 0;
   position: relative;
 }
-.form_element_group > [class^=btn_]:after {
+.form_element_group > [class^=btn_]:not(.btn_inlinebox):after {
   display: block;
   content: "";
   width: 100%;
@@ -4158,8 +4158,15 @@ img.intro_logo {
   font-size: 1.25rem;
 }
 
-.mid_copy_sub { /*margin-top:rem(14);*/
+.mid_copy_title + .mid_copy_sub {
+  margin-top: 0.875rem;
+}
+
+.mid_copy_sub {
   line-height: 1.3;
+}
+.mid_copy_sub.type2 {
+  margin-top: 0;
 }
 
 .mid_copy_sub_2 {
@@ -4663,7 +4670,7 @@ input.boxprops:checked + .boxprops_label:before {
 .info_message_cont {
   background: #F7F7F7;
   margin: 0 -1.25rem;
-  padding: 1.25rem 1.25rem;
+  padding: 0.875rem 1.25rem;
   margin-top: 0.9375rem;
 }
 .indent_item_list {
@@ -5979,44 +5986,8 @@ input.search_input {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transform: translateY(20%);
 }
 
-.main_contents .card_group {
-  -webkit-animation: intro_motion 2s ease-in-out forwards;
-          animation: intro_motion 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes intro_motion {
-  0% {
-    transform: translateY(5%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-5%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes intro_motion {
-  0% {
-    transform: translateY(5%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-5%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .blur_cover, .bg_main, .bg_card, .bg_card_front {
   position: absolute;
   top: 0;
@@ -6066,6 +6037,9 @@ input.search_input {
   z-index: 1;
   filter: blur(6px);
   -webkit-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .front_logo {
@@ -6084,6 +6058,48 @@ input.search_input {
 
 .bg_card_front {
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bg_card_front .card_top {
+  background-color: #ebebeb;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+.bg_card_front .shadow {
+  display: block;
+  height: 5.8125rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url("../images/shadow_front.png") no-repeat 50% 100%/100% auto;
+}
+.bg_card_front .shadow .inline {
+  display: block;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: -3vw;
+  width: calc(100% + 6vw);
+  box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.3);
+}
+.bg_card_front .card_top_qr {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: block;
+}
+.bg_card_front .card_top_qr > * {
+  width: 100%;
+  height: 100%;
+}
+.bg_card_front .card_bottom {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .card_front {
@@ -6095,48 +6111,48 @@ input.search_input {
   background-color: #ebebeb;
   border-radius: 0.875rem 0.875rem 0 0;
 }
-.card_front:before {
-  display: block;
-  content: "";
-  width: 8.333vw;
-  height: 8.333vw;
-  position: absolute;
-  top: 20.7142857143%;
-  right: 8.6956521739%;
-  background: url("../images/skin_qr.svg") no-repeat 0 0/100% auto;
-}
-.card_front .shadow {
-  display: block;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: url("../images/shadow_front.png") no-repeat 50% 100%/100% auto;
-}
-.card_front .shadow .inline {
-  display: block;
-  content: "";
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: -3vw;
-  width: calc(100% + 6vw);
-  box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.3);
-}
 .card_front.type2:before {
   background-image: url("../images/skin_qr_w.svg");
 }
 
-.card_img {
-  display: block;
-  content: "";
+.card_item_group {
+  width: 67.647vw;
+  margin-right: 10.882vw;
+  position: relative;
+}
+
+.cart_top_zone {
+  height: 5.8125rem;
+  position: relative;
+}
+
+.cart_top_wrap {
+  height: 7.5rem;
   position: absolute;
-  top: 67.13vw;
-  left: 20.37vw;
-  width: 63.889vw;
-  height: 77.778vw;
-  background: #ebebeb url("../images/skin_card.png") no-repeat 0 100%/100% auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card_top { /*background-color:#ebebeb;border-radius:rem(14) rem(14) 0 0;*/
+  height: 5.8125rem;
+  display: block;
+  -webkit-animation: intro_top 1.5s ease-in-out forwards;
+          animation: intro_top 1.5s ease-in-out forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card_bottom {
+  background-color: #ebebeb;
+  position: relative;
+  top: -0.625rem;
+  display: block;
+  -webkit-animation: intro_bottom 1.5s ease-in-out forwards;
+          animation: intro_bottom 1.5s ease-in-out forwards;
 }
 
 .out_bg_img {
@@ -6158,6 +6174,63 @@ input.search_input {
   height: 100%;
 }
 
+@-webkit-keyframes intro_top {
+  0% {
+    height: 4.875rem;
+    opacity: 0;
+  }
+  50% {
+    height: 7.0625rem;
+    opacity: 1;
+  }
+  100% {
+    height: 5.8125rem;
+    opacity: 1;
+  }
+}
+
+@keyframes intro_top {
+  0% {
+    height: 4.875rem;
+    opacity: 0;
+  }
+  50% {
+    height: 7.0625rem;
+    opacity: 1;
+  }
+  100% {
+    height: 5.8125rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes intro_bottom {
+  0% {
+    transform: translateY(0.9375rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-1.25rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes intro_bottom {
+  0% {
+    transform: translateY(0.9375rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-1.25rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media (max-height: 739px) {
   .card_front {
     top: 32vw;
