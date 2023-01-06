@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/front.js"></script>
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap layout_type2">
+		<header class="header_wrap">
+			<a href="javascript:;" class="btn_history_back"><span class="hdtext">뒤로가기</span></a>
+			<h1 class="header_title"><span class="header_title_text">회원가입</span></h1>
+		</header>
+		<section class="mid_section">
+			<div class="logo_copy_item">
+				<div class="logo_img_row"><img src="./images/logo_copy.png" alt=""></div>
+				<div class="logo_btn_row">
+					<a href="#" class="btn_submitbox"><span class="submitbox_text">휴대폰 회원가입</span></a>
+				</div>
+			</div>
+		</section>
+		<section class="bottom_section type2">
+			<div class="sns_group_zone">
+				<p class="sns_label">SNS 간편로그인</p>
+				<ul class="sns_hor_list">
+					<li><a href="#" class="sns_item sns_kakao"><span class="hdtext">kakao</span></a></li>
+					<li><a href="#" class="sns_item sns_naver"><span class="hdtext">naver</span></a></li>
+					<li><a href="#" class="sns_item sns_face"><span class="hdtext">facebook</span></a></li>
+					<li><a href="#" class="sns_item sns_google"><span class="hdtext">goolgle</span></a></li>
+				</ul>
+				<div class="btn_row"><a href="#" class="btn_linebox"><span class="linebox_text">로그인 하기</span></a></div>
+			</div>
+		</section>
+		<!-- popup -->
+
+		<div class="popup_wrap type2" id="recommender_popup_01">
+			<div class="bg_dim"></div>
+			<div class="botpos_vlayer">
+				<div class="botpos_vtitlow">
+					<h3 class="botpos_vtit">정보입력</h3>
+				</div>
+				<div class="botpos_vcontlow">
+					<div class="vertical_form_group">
+						<div class="vertical_form">
+							<p class="vform_label">아이디(이메일)</p>
+							<div class="vform_cont">
+								<div class="form_element_group">
+									<input type="text" class="form_input" placeholder="아이디를 입력하세요.">
+								</div>
+							</div>
+						</div>
+						<div class="vertical_form">
+							<p class="vform_label">비밀번호</p>
+							<div class="vform_cont">
+								<div class="form_element_group warn">
+									<input type="password" class="form_input" placeholder="영문+숫자+특수문자 조합 8~16자리">
+								</div>
+								<p class="form_warn_text">영문, 숫자, 특수문자를 모두 사용하여 입력해주세요.</p>
+							</div>
+						</div>
+						<div class="vertical_form">
+							<p class="vform_label">비밀번호 확인</p>
+							<div class="vform_cont">
+								<div class="form_element_group warn">
+									<input type="password" class="form_input" placeholder="비밀번호를 한번 더 입력하세요.">
+								</div>
+								<p class="form_warn_text">비밀번호가 일치하지 않습니다.</p>
+							</div>
+						</div>
+						<div class="vertical_form">
+							<p class="vform_label">주소</p>
+							<div class="vform_cont">
+								<div class="form_element_group">
+									<input type="text" class="form_input" placeholder="도로명주소, 건물명 또는 지번을 입력하세요.">
+									<button type="button" class="btn_search"><span class="hdtext">검색</span></button>
+								</div>
+							</div>
+						</div>
+						<div class="vertical_form">
+							<p class="vform_label">주소</p>
+							<div class="vform_cont">
+								<div class="result_boxitem">
+									<div class="result_sig_cols">
+										<p class="result_sig_main">서울시 용산구 서빙고로 137</p>
+										<p class="result_sig_sub">04383 (용산동6가 168-6)</p>
+									</div>
+									<div class="result_sub_cols">
+										<a href="#" class="btn_textcontrol">수정</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="vertical_form">
+							<p class="vform_label">추천인</p>
+							<div class="vform_cont">
+								<div class="form_element_group">
+									<input type="text" class="form_input" placeholder="추천인 코드를 입력하세요">
+									<button type="button" class="btn_qr"><span class="hdtext">qr</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="botpos_vbtnlow">
+					<a href="#" class="btn_vsubmit type2 close_trigger"><span class="btn_vsubmit_in">이전</span></a>
+					<a href="#" class="btn_vsubmit close_trigger"><span class="btn_vsubmit_in">회원가입완료</span></a>
+				</div>
+				<a href="javascript:;" class="btn_closeitem popup_close"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 퍼블확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				if (url_2 === "recommender") {
+					let agree_popup = new DesignPopup({
+						selector: "#recommender_popup_01"
+					});
+				} else if (url_2 === "recommender_02") {
+					let agree_popup = new DesignPopup({
+						selector: "#recommender_popup_02"
+					});
+				}
+				// designPopup.popupHide("#samplePopup"); 닫기
+			});
+
+			function agreeFunc() {
+				const agree_props_zone = document.querySelector(".agree_props_zone");
+				const props_all = agree_props_zone.querySelector("#props_all");
+				const props_tail = agree_props_zone.querySelectorAll(".agree_detail_low .props_form");
+				props_all.addEventListener("click", (e) => {
+					props_tail.forEach((element) => {
+						element.checked = e.currentTarget.checked;
+					});
+				});
+				// 자세히 보기 popup 클릭
+				document.querySelectorAll(".btn_props_tail").forEach((element) => {
+					element.addEventListener("click", (e) => {
+						e.preventDefault();
+						let thisEventObj = e.currentTarget;
+						let thisEventTaret = thisEventObj.getAttribute("href")
+						let agree_popup = new DesignPopup({
+							selector: thisEventTaret
+						});
+					});
+				});
+			}
+		</script>
+	</div>
+</body>
+
+</html>
