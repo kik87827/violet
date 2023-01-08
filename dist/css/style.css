@@ -5294,6 +5294,7 @@ textarea.box_textarea {
 }
 .gallery_list > li.nodata_li {
   padding: 6.25rem 1.25rem !important;
+  flex: 0 0 100% !important;
 }
 
 .gallery_item {

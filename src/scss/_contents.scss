@@ -952,7 +952,7 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
 }
 .gallery_list{display:flex;flex-wrap:wrap;
     > li{flex:0 0 100%;margin-bottom:rem(60);
-        &.nodata_li{padding:rem(100) rem(20) !important;}
+        &.nodata_li{padding:rem(100) rem(20) !important;flex:0 0 100% !important;}
     }
 }
 .gallery_item{display:block;
