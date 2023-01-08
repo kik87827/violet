@@ -564,7 +564,6 @@ function dataClampMore() {
       let thisElementToggle = thisEventObj.getAttribute("data-moreToggle");
       let thisEventObjTarget = document.querySelector(thisEventObj.getAttribute("href"));
       e.preventDefault();
-      console.log(thisEventObjTarget);
       if (toggleIs) {
         thisEventObj.textContent = thisElementText;
         thisEventObjTarget.classList.remove("fullshow");
@@ -577,12 +576,14 @@ function dataClampMore() {
   });
 }
 
-function tabMenuActive(target) {
+function tabMenuActive(target, callback) {
   let targetDom = document.querySelectorAll(target);
   targetDom.forEach((element) => {
     let thisEach = element;
+    let thisEachBox = thisEach.querySelectorAll(".boxtab");
     let thisEachMenu = thisEach.querySelectorAll("li > a");
     let currentItem = thisEach.querySelector("li.active");
+    let currentItemBox = thisEach.querySelector(".boxtab.active");
     thisEachMenu.forEach((elementMenu) => {
       elementMenu.addEventListener("click", (e) => {
         e.preventDefault();
@@ -591,7 +592,23 @@ function tabMenuActive(target) {
           currentItem.classList.remove("active");
         }
         thisCurrentLi.classList.add("active");
+        if (callback) {
+          callback();
+        }
         currentItem = thisCurrentLi;
+      });
+    });
+    thisEachBox.forEach((elementMenu) => {
+      elementMenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentItemBox !== null) {
+          currentItemBox.classList.remove("active");
+        }
+        elementMenu.classList.add("active");
+        if (callback) {
+          callback(elementMenu);
+        }
+        currentItemBox = elementMenu;
       });
     });
   });
@@ -617,6 +634,55 @@ function mainSwiper() {
   if (intro_swiper_slide.length > 1) {
     main_swiper = new Swiper(".card_group_swiper", {
       speed: 800
+    });
+  }
+}
+
+function inputValueCheck() {
+  const value_check_form = document.querySelectorAll("[name='value_check_form']");
+  if (value_check_form.length) {
+    value_check_form.forEach((element, index) => {
+      const thisElement = element;
+      const thisElementInput = element.querySelector(".form_input");
+      const thisElementReset = element.querySelector(".btn_reset");
+      valueCheck(thisElement);
+
+      thisElementInput.addEventListener("focus", () => {
+        valueCheck(thisElement);
+      });
+      thisElementInput.addEventListener("keyup", () => {
+        valueCheck(thisElement);
+      });
+
+      thisElementReset.addEventListener("click", () => {
+        thisElementInput.value = "";
+        valueCheck(thisElement);
+      });
+
+    });
+  }
+
+  function valueCheck(item) {
+    const thisItem = item;
+    const thisElementInput = thisItem.querySelector(".form_input");
+
+    if (thisElementInput.value.length > 0) {
+      thisItem.classList.add("has_value");
+    } else {
+      thisItem.classList.remove("has_value");
+    }
+  }
+}
+
+function toggleActive(item) {
+  const itemObj = document.querySelectorAll(item);
+  if (itemObj.length) {
+    itemObj.forEach((element, index) => {
+      const thisElement = element;
+      thisElement.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.currentTarget.classList.toggle("active");
+      });
     });
   }
 }
