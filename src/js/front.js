@@ -357,6 +357,10 @@ function commonForm() {
       thisTarget.classList.remove("ready");
     }
   });
+  addDynamicEventListener(document.body, 'click', '.ready_type2', function(e) {
+    let thisTarget = e.target;
+    //thisTarget.classList.remove("ready_type2");
+  });
   let form_input = document.querySelectorAll(".form_input");
   if(form_input.length){
     form_input.forEach(function(elem,index){

@@ -8,8 +8,86 @@
 			<h1 class="header_title"><span class="header_title_text">예약하기</span></h1>
 		</header>
 		<section class="mid_section">
-			내용이 들어갑니다.
+			<div class="thumnail_data_both_group">
+				<div class="thumnail_data_both">
+					<a href="#" class="thumnail_data"><img src="./images/temp_img_350x465.png" alt=""></a>
+					<div class="thumnail_spec">
+						<a href="#" class="product_spec_group">
+							<div class="product_spec_row"><span class="pro_spec_label">GUCCI</span></div>
+							<div class="product_name">재키 1961 스몰백</div>
+							<div class="product_price_row">
+								<div class="price_obj">
+									<span class="price_value">580,000</span>
+									<span class="price_unit">원</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="vertical_form_group">
+				<div class="vertical_form">
+					<p class="vform_label">약속시간</p>
+					<div class="vform_cont">
+						<div class="vform_block">
+							<input type="text" class="form_input calendar ctype2 btype2" value="2022.10.10">
+						</div>
+						<div class="vform_block">
+							<div class="form_element_group_wrap">
+								<select class="form_select wid_short">
+									<option value="0">오전</option>
+									<option value="1">오후</option>
+								</select>
+								<div class="form_element_group wid_long">
+									<div class="with_unit">
+										<input type="text" class="form_input align2" value="11">
+										<span class="unit">시</span>
+									</div>
+									<div class="with_unit">
+										<input type="text" class="form_input align2" value="30">
+										<span class="unit">분</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vertical_form">
+					<p class="vform_label">약속장소</p>
+					<div class="vform_cont">
+						<div class="form_element_group">
+							<input type="text" class="form_input" value="스타벅스 서울역점">
+						</div>
+					</div>
+				</div>
+				<div class="vertical_form">
+					<p class="vform_label">구매자</p>
+					<div class="vform_cont">
+						<div class="form_element_group" name="value_check_form">
+							<input type="text" class="form_input" placeholder="검색어를 입력하세요.">
+							<button type="button" class="btn_reset"><span class="hdtext">리셋</span></button>
+							<button type="button" class="btn_search"><span class="hdtext">검색</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
+		<script>
+			inputValueCheck();
+
+			$(function(){
+				$(".calendar").datepicker({
+					monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+					dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+					changeMonth: true,
+					changeYear: true,
+					dateFormat: 'yy.mm.dd',
+					beforeShow(input,inst){
+						
+					}
+				});
+			});
+		</script>
 		<div class="bottom_layer">
 			<div class="btn_vsubmit_fxwrap">
 				<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">예약완료</span></a>
