@@ -133,6 +133,19 @@
 				<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">디지털 보증서 전송하기</span></a>
 			</div>
 		</div>
+		<script>
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			if (url_2 === "case02") {
+				document.querySelector("[name='normal_type']").remove();
+			} else if (url_2 === "case03") {
+				document.querySelector("[name='normal_type']").remove();
+				document.querySelector("[name='end_type'] .card_message").classList.add("type2")
+			} else {
+				document.querySelector("[name='end_type']").remove();
+			}
+		</script>
 	</div>
 </body>
 
