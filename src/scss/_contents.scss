@@ -956,7 +956,7 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
         // .pro_spec_label{font-size:rem(12);padding:rem(7) rem(10);}
         .gallery_thum{padding-bottom:132.967032967033%;}
     }
-    .pro_spec_title{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;line-height:1.3}
+    
     &.mtype2{
         .gallery_list{
             margin-bottom:rem(-20);
@@ -977,10 +977,12 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
     }
 }
 .gallery_item{display:block;
+    .pro_spec_title{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;line-height:1.3}
     .pro_spec_label{}
 }
 .gallery_thum{
-    position:relative;padding-bottom:143.75%;display:block;height:0;box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    position:relative;padding-bottom:143.75%;display:block;height:0;box-shadow: 0px rem(5) rem(10) rgba(0, 0, 0, 0.15);
+    background:url("../im")
     &.type2{padding-bottom:100%;}
     > img{display:block;width:100%;height:100%;position:absolute;top:0;left:0;object-fit: cover;object-position: 50% 50%;}
 }
@@ -989,7 +991,7 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
     .text_label_obj{position:absolute;top:rem(7);left:0;}
 }
 .gallery_spec_group{
-    margin-top:rem(20);
+    margin-top:rem(20);display:block;
      > *{}
 }
 
@@ -1112,7 +1114,7 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
 .price_unit{margin-left:rem(3)}
 
 .detail_data_item{margin-top:rem(27);
-    &.type2{margin-top:rem(10);}
+    &.type2{margin:rem(10) 0 rem(55);}
 }
 .detail_data_title_row{margin-bottom:rem(10);}
 .detail_data_kind{
@@ -1705,17 +1707,19 @@ textarea.textform_ta{}
 }
 .toggle_event_content{display:none;margin:rem(14) 0 rem(-14);background:#F6F6F6;font-size:rem(14);line-height:1.4;padding:rem(14);}
 
-.getdata_column_item_wrap{}
+.getdata_column_item_wrap{margin:0 rem(-20);}
 .getdata_column_item{
     margin-bottom:rem(54);position:relative;
     &:last-of-type{margin-bottom:0;}
 }
-.getdata_column_title_row{margin-bottom:rem(16);padding-right:rem(30);}
+.getdata_column_title_row{padding:0 rem(50) 0 rem(20);}
 .getdata_column_title{font-size:rem(27);line-height:1;}
 .getdata_column_title_sub{font-size:rem(27);font-weight:300;line-height:1;}
-.getdat_column_content_row{}
+.getdata_column_content_row{
+    &.type2{margin-top:rem(20)}
+}
 .btn_getdata_more{
-    position:absolute;top:rem(4);right:0;width:rem(22);height:rem(22);
+    position:absolute;top:rem(4);right:rem(20);width:rem(22);height:rem(22);
     &:before,
     &:after{display:block;content:'';position:absolute;top:50%;left:0;width:100%;height:rem(2);margin-top:rem(-1);background:#000;}
     &:before{}
@@ -1797,46 +1801,95 @@ select.sort_select{
 
 /* market */
 .swiper-container{
+    
+    &.moving{
+        &::before,
+        &::after{opacity:0;}
+    }
+    
+    
+    &.type3{
+        overflow:visible;
+        .swiper-slide{
+            &:last-of-type{
+                .box_gallery_list_group{
+                }
+                padding-right:rem(20);
+            }
+            width:calc(100% - rem(20));
+        }
+        .swiper-wrapper{
+           box-sizing:border-box;padding:0 0 0 rem(40);
+           display:flex;
+            .box_gallery_list_group{transform:translateX(rem(-40));padding:0 0 0 rem(20)}
+        }
+    }
+
     &.slide_gallery{
-        .swiper-wrapper{}
-        .swiper-slide{}
-        .gallery_item{}
+        padding:0 rem(20);
+        &::before,
+        &::after{display:block;content:'';width:rem(10);height:100%;background:#fff;position:absolute;top:0;z-index:5;}
+        &::before{left:0;}
+        &::after{right:0;}
+        .swiper-wrapper{
+            box-sizing: border-box;
+        }
+        .gallery_item{padding:rem(16) 0 rem(20);flex:1;min-width:0;}
         .swiper-scrollbar{
             .swiper-scrollbar-drag{}
-            .swiper-scrollbar-drag{}
         }
-        &.type2{}
-        &.type3{}
+
+        .swiper_item_list_wrap{
+            padding:rem(11.5) 0 0; margin:0 rem(-8.5);
+        }
+        .swiper_item_list{
+                display:flex;flex-wrap:wrap;width:100%;
+            > li{
+                flex:0 0 50%;width:50%;box-sizing:border-box;padding:rem(8.5);
+                .gallery_item{padding:0 0 rem(11.5) 0;}
+            }
+        }
+        
+
+        .swiper-slide{
+            display:flex;
+        }
+    }
+    .swiper-scrollbar{
+        left:rem(20); width:calc(100% - rem(40)); bottom:0; background:#D9D9D9;height:rem(2);
+        .swiper-scrollbar-drag{}
     }
 }
-.swiper-scrollbar{
-    .swiper-scrollbar-drag{}
-    .swiper-scrollbar-drag{}
-}
 
-.pro_full_item_wrap{}
-.pro_full_item{}
+.pro_full_item_wrap{margin:rem(20) 0;position:relative;}
+.pro_full_item{position:relative;}
 .pro_full_img{
-    > img{}
+    position:relative;display:block;height:0;padding-bottom:132.962962962963%;
+    > img{vertical-align: top;display:block;width:100%;height:100%;position:absolute;top:0;left:0;object-fit: cover;object-position: 50% 50%;}
 }
 .pro_layer_left{
+    position:absolute;top:rem(14);left:rem(14);
     .pro_spec_label{}
 }
 .pro_layer_right{
+    position:absolute;top:rem(10);right:rem(10);
     .btn_like_toggle{}
 }
 .pro_layer_bottom{
-
+    background:#fff;position:absolute;bottom:rem(20);left:rem(20);width:calc(100% - rem(40));box-sizing: border-box;padding:rem(14);
+    .pro_item_price{}
 }
 .pro_item_both{
+    display:flex;justify-content:space-between;align-items:center;
     .pro_notice_box{}
 }
-.pro_item_title{}
+.pro_item_title{font-size:rem(14);line-height:1.3;}
 .pro_item_price{
+    padding:rem(9) 0 0;
     .price_obj{}
 }
 .data_guide_both + .box_gallery_list_group{margin-top:rem(20);}
-.box_gallery_list{border-bottom:1px solid #CCCCCC;border-right:1px solid #CCCCCC;
+.box_gallery_list{border-bottom:1px solid #CCCCCC;border-right:1px solid #CCCCCC;background:#fff;
     > li{
         &:last-of-type{}
     }
@@ -1931,3 +1984,4 @@ select.sort_select{
     .thumnail_data{}
     & + .vertical_form_group{margin-top:rem(34);}
 }
+
