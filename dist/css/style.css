@@ -955,7 +955,6 @@ html,
 .page_wrap {
   position: relative;
   min-width: 280px;
-  overflow-x: hidden;
 }
 .page_wrap.type2 .header_wrap {
   background-color: transparent;
@@ -976,6 +975,9 @@ html,
   position: absolute;
   top: 0;
   left: 0;
+}
+.page_wrap.xhidden {
+  overflow-x: hidden;
 }
 .page_wrap.layout_type2 {
   display: flex;
@@ -7175,11 +7177,13 @@ input.search_input {
 
 .getdata_column_item_wrap {
   margin: 0 -1.25rem;
+  overflow-x: hidden;
 }
 
 .getdata_column_item {
   margin-bottom: 3.375rem;
   position: relative;
+  overflow-x: hidden;
 }
 .getdata_column_item:last-of-type {
   margin-bottom: 0;
@@ -7451,12 +7455,12 @@ select.sort_select:disabled {
 }
 .swiper-container.slide_gallery .swiper_item_list_wrap {
   padding: 0.71875rem 0 0;
-  margin: 0 -0.53125rem;
+  width: 100%;
 }
 .swiper-container.slide_gallery .swiper_item_list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  margin: 0 -0.53125rem;
 }
 .swiper-container.slide_gallery .swiper_item_list > li {
   flex: 0 0 50%;

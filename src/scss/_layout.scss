@@ -6,7 +6,7 @@ html:not(.touchmode) ::-webkit-scrollbar-thumb {background-color: #ccc;border-ra
 html:not(.touchmode) ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
 html,
 .front_body{height:100%;min-height:100vh;}
-.page_wrap{position:relative;min-width:280px;overflow-x:hidden;
+.page_wrap{position:relative;min-width:280px;
     &.type2{
         .header_wrap{background-color:transparent;}
         .header_title_text{color:#fff;}
@@ -19,6 +19,7 @@ html,
         }
         
     }
+    &.xhidden{overflow-x:hidden;}
     &.layout_type2{
         display:flex;flex-direction:column;justify-content:space-between;
         min-height:100vh;
