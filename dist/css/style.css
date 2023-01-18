@@ -7773,6 +7773,18 @@ select.sort_select:disabled {
   font-weight: 500;
 }
 
+.sub_text_data_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.125rem 0;
+}
+
+.sub_text_data {
+  font-size: 0.75rem;
+  line-height: 1;
+  display: inline-block;
+}
 .thumnail_data_both_group + .vertical_form_group {
   margin-top: 2.125rem;
 }

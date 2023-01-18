@@ -1972,8 +1972,9 @@ select.sort_select{
 .keyword_guide_label{display:inline-block;color:#000000;font-weight:500;}
 .keyword_guide_para{}
 
-.sub_text_data_group{}
+.sub_text_data_group{display:flex;justify-content: space-between;align-items: center;padding:rem(2) 0}
 .sub_text_data{
+    font-size:rem(12);line-height:1;display:inline-block;
     &:last-of-type{}
 }
 
