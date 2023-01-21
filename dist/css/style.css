@@ -5271,12 +5271,12 @@ textarea.box_textarea {
 }
 
 .gallery_list_wrap.type2 .gallery_list {
-  margin: -0.5625rem -0.5625rem -2.5rem;
+  margin: -0.5625rem -0.5625rem -1.25rem;
 }
 .gallery_list_wrap.type2 .gallery_list > li {
   flex-basis: 50%;
   box-sizing: border-box;
-  padding: 0.5625rem 0.5625rem 2.5rem;
+  padding: 0.5625rem 0.5625rem 1.25rem;
   margin-bottom: 0;
 }
 .gallery_list_wrap.type2 .pro_spec_ico_group {
@@ -5302,9 +5302,6 @@ textarea.box_textarea {
 }
 .gallery_list_wrap.mtype2 .gallery_list {
   margin-bottom: -1.25rem;
-}
-.gallery_list_wrap.mtype2 .gallery_list > li {
-  margin-bottom: 1.25rem;
 }
 .gallery_list_wrap.mtype3 .gallery_list > li {
   margin-bottom: 1.75rem;
@@ -5344,7 +5341,7 @@ textarea.box_textarea {
   height: 0;
   box-shadow: 0px 0.3125rem 0.625rem rgba(0, 0, 0, 0.15);
 }
-background:url("../im") .gallery_thum.type2 {
+.gallery_thum.type2 {
   padding-bottom: 100%;
 }
 .gallery_thum > img {
@@ -6918,7 +6915,7 @@ input.search_input {
 }
 
 .board_sort_row + .board_getdata_list_wrap, .board_sort_row + .boxtab_wrap {
-  margin-top: 1.6875rem;
+  margin-top: 2.125rem;
 }
 
 .board_getdata_list_wrap {
@@ -7301,11 +7298,13 @@ select.sort_select:disabled {
 }
 
 .text_label_obj {
-  display: inline-flex;
+  display: inline-block;
   background: #000;
-  padding: 0.25rem 0.25rem 0.25rem 0.5625rem;
+  padding: 0 0.4375rem 0 0.75rem;
   position: relative;
   align-items: center;
+  height: 1.25rem;
+  line-height: 1rem;
 }
 .text_label_obj:before {
   display: block;
@@ -7318,12 +7317,16 @@ select.sort_select:disabled {
   left: 0;
 }
 
+.window .text_label_obj {
+  line-height: 0.875rem;
+}
+
 .text_label_key,
 .text_label_value {
   font-size: 0.625rem;
-  line-height: 1;
-  display: inline-block;
   color: #fff;
+  display: inline-block;
+  line-height: 1;
 }
 
 .text_label_key {
@@ -7332,7 +7335,6 @@ select.sort_select:disabled {
 
 .text_label_value {
   font-weight: 500;
-  padding-left: 0.1875rem;
 }
 
 .count_obj_list {
@@ -7347,15 +7349,13 @@ select.sort_select:disabled {
 }
 
 .count_obj {
-  display: inline-flex;
-  align-items: center;
   font-size: 0.875rem;
+  line-height: 1;
 }
 
 .coount_obj_key,
 .coount_obj_value {
   display: inline-block;
-  line-height: 1;
 }
 
 .coount_obj_key {
@@ -7470,6 +7470,9 @@ select.sort_select:disabled {
 }
 .swiper-container.slide_gallery .swiper_item_list > li .gallery_item {
   padding: 0 0 0.71875rem 0;
+}
+.swiper-container.slide_gallery .pro_spec_else_row {
+  display: block;
 }
 .swiper-container.slide_gallery .swiper-slide {
   display: flex;
