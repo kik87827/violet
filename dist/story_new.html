@@ -22,7 +22,65 @@
 			<h1 class="header_title"><span class="header_title_text">새 게시물</span></h1>
 		</header>
 		<section class="mid_section">
-			내용이 들어갑니다
+			<div class="vertical_form_group">
+				<div class="vertical_form">
+					<div class="vertical_title_row">
+						<p class="vertical_title">사진/영상</p>
+						<a href="javascript:;" class="btn_morebox"></a>
+					</div>
+					<div class="vertical_content_row">
+						<div class="upload_imgbox_list_wrap">
+							<ul class="upload_imgbox_list">
+								<li>
+									<div class="upload_imgbox">
+										<img src="./images/temp_img_300x300.png" alt="">
+										<a href="javascript:;" class="btn_upload_del"><span class="hdtext">삭제</span></a>
+									</div>
+								</li>
+								<li>
+									<div class="upload_imgbox">
+										<img src="./images/temp_img_300x300.png" alt="">
+										<a href="javascript:;" class="btn_upload_del"><span class="hdtext">삭제</span></a>
+									</div>
+								</li>
+								<li>
+									<div class="upload_filebox">
+										<span class="upload_file_ico"></span>
+										<input type="file" class="hidden_file">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<ul class="design_block_list">
+							<li>사진/영상은 최대 10장까지 업로드 가능합니다.</li>
+							<li>00MB 이하의 이미지만 업로드 가능합니다.</li>
+						</ul>
+						<div class="count_textarea_box">
+							<textarea rows="10" cols="10" class="textarea" placeholder="게시글 입력하세요."></textarea>
+							<p class="count_text_g"><span class="count_text">0/1,000</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="vertical_form">
+					<p class="vform_label">공개범위</p>
+					<div class="vform_cont">
+						<select class="form_select ready">
+							<option value="0">전체공개</option>
+							<option value="1">구독회원공개</option>
+							<option value="2">숨김</option>
+						</select>
+					</div>
+				</div>
+				<div class="vertical_form">
+					<p class="vform_label">댓글</p>
+					<div class="vform_cont">
+						<select class="form_select ready">
+							<option value="0">허용</option>
+							<option value="1">허용안함</option>
+						</select>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="btn_section">
 			<a href="#" class="btn_vsubmit"><span class="btn_vsubmit_in">등록하기</span></a>
