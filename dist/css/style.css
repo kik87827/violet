@@ -3970,6 +3970,60 @@ img.intro_logo {
   margin-top: 0;
 }
 
+.vertical_title_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.9375rem;
+}
+
+.vertical_title {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #000;
+}
+
+.btn_morebox {
+  display: block;
+  width: 1.375rem;
+  height: 1.375rem;
+  position: relative;
+}
+.btn_morebox:before, .btn_morebox:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  margin-top: -0.0625rem;
+  background: #000;
+}
+.btn_morebox:after {
+  transform: rotate(90deg);
+}
+
+.count_textarea_box {
+  margin-top: 0.9375rem;
+  border: 1px solid #999999;
+}
+.count_textarea_box .textarea {
+  border: 0;
+  width: 100%;
+  border: 0;
+  resize: none;
+  box-sizing: border-box;
+  height: 8.4375rem;
+  padding: 0.75rem 0.9375rem;
+}
+
+.count_text_g {
+  text-align: right;
+  color: #999999;
+  padding: 0 0.9375rem 0.9375rem;
+  font-size: 0.75rem;
+}
+
 .vform_label {
   display: block;
   font-size: 0.875rem;
@@ -4580,7 +4634,7 @@ textarea.box_textarea {
 
 .upload_filebox {
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: calc(100% - 0.125rem);
   overflow: hidden;
   border: 1px solid #b3b3b3;
   box-sizing: border-box;

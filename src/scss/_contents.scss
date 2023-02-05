@@ -417,20 +417,24 @@ img.intro_logo{max-width:157px;}
     margin-top:rem(30);
     &:first-of-type{margin-top:0;}
 }
-.vertical_title_row{}
-.vertical_title{}
+.vertical_title_row{display:flex;justify-content: space-between;margin-bottom:rem(15);}
+.vertical_title{font-size:rem(20);line-height:1;color:#000;}
 .btn_morebox{
+    display:block;width:rem(22);height:rem(22);position:relative;
+    &:before,
+    &:after{display:block;content:'';position:absolute;top:50%;left:0;width:100%;height:rem(2);margin-top:rem(-1);background:#000;}
     &:before{}
-    &:after{}
+    &:after{transform: rotate(90deg);}
 }
 .vertical_content_row{
     .upload_imgbox_list_wrap{}
     .count_textarea_box{}
 }
 .count_textarea_box{
-    &.textarea{}
+    margin-top:rem(15);border:1px solid #999999;
+    .textarea{border:0;width:100%;border:0;resize: none;box-sizing: border-box;height:rem(135);padding:rem(12) rem(15);}
 }
-.count_text_g{}
+.count_text_g{text-align: right;color:#999999;padding: 0 rem(15) rem(15);font-size:rem(12);}
 .count_text{}
 
 .vform_label{display:block;font-size:rem(14);line-height:1;color:#000;margin-bottom:rem(10);}
@@ -655,7 +659,7 @@ textarea.box_textarea{width:100%;height:rem(100);resize:none;font-size:rem(14);c
 
 
 
-.upload_filebox{position:relative;padding-bottom:100%;overflow:hidden;border:1px solid #b3b3b3;box-sizing: border-box;}
+.upload_filebox{position:relative;padding-bottom:calc(100% - rem(2));overflow:hidden;border:1px solid #b3b3b3;box-sizing: border-box;}
 .upload_file_ico{
     display:block;width:rem(22);height:rem(22);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
     &:before,
