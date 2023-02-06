@@ -782,15 +782,25 @@ function memberDataSwiper() {
     thisEventParent.classList.toggle("active");
   });
 
-  addDynamicEventListener(document.body, 'click', '.ico_value_obj', function(e) {
-    const etarget = e.target.closest(".ico_value_obj");
+  var ico_subscribe_default = '';
+  addDynamicEventListener(document.body, 'click', '.ico_subscribe_obj', function(e) {
+    const etarget = e.target.closest(".ico_subscribe_obj");
+    const etargetText = etarget.querySelector(".ico_value_text");
     e.preventDefault();
+    if(ico_subscribe_default === ""){
+     ico_subscribe_default =  etarget.textContent;
+    }
     etarget.classList.toggle("active");
+    if(etarget.classList.contains("active")){
+      etargetText.textContent = subscribeText;
+    }else{
+      etargetText.textContent = ico_subscribe_default;
+    }
+    console.log(etargetText);
   });
   addDynamicEventListener(document.body, 'click', '.btn_mdata_more', function(e) {
     const etarget = e.target;
     const etargetParent = etarget.closest(".member_data_keyword_row");
-    console.log(etarget);
     e.preventDefault();
     etargetParent.classList.add("expand");
   });
